@@ -14,7 +14,7 @@ namespace Searchfight
 {
     public class SearchEngineQueryMaker : ISearchEngineQueryMaker 
     {
-        // Makes a single word query to the search engines passed as parameters and 
+        // Makes a single query to the search engines passed as parameters and 
         // returns an enumerable collection of search engine query responses.
         public IEnumerable<SearchEngineQueryResponse> MakeNewQuery(string wordToSearch, params SearchEngine[] searchEngines )
         {
