@@ -88,7 +88,7 @@ namespace Searchfight
         private SearchEngineQueryResponse QueryMSNSearch(string wordToSearch)
         {
             var client = new HttpClient();
-
+             
             var apiKey = "1f3497a23ded414e9590844d2313fa72";
             var uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
 

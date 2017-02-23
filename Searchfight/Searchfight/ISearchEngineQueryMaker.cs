@@ -8,7 +8,7 @@ namespace Searchfight
     {
         IEnumerable<SearchEngineQueryResponse> MakeNewQuery(string wordToSearch);
         IEnumerable<SearchEngineQueryResponse> MakeNewBashQuery(IEnumerable<string> wordsToSearch);
-        
+         
 
     }
 }
