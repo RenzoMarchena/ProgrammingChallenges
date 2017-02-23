@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+ 
 namespace SearchFight.Interfaces
 {
     public interface IQueryMaker

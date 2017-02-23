@@ -32,8 +32,10 @@ namespace SearchFight.SearchEngines
                 totalResults = GetTotalResults(jObj);
 
             }
-           
-
+            else
+            {
+                //handle TimeOut here
+            }
             var searchResult = new SearchResult();
 
             searchResult.SearchEngineUsed = ToString();

@@ -7,5 +7,5 @@ namespace SearchFight.Interfaces
         IEnumerable<string> GetResultsByProgrammingLanguage(IEnumerable<SearchResult> searchResults);
         IEnumerable<string> GetWinnerBySearchEngine(IEnumerable<SearchResult> searchResults);
 
-    }
+    } 
 }
