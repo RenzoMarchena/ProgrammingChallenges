@@ -7,8 +7,8 @@ using Newtonsoft.Json.Linq;
 
 namespace Searchfight
 {
-    public class SearchEngineQueryMaker : ISearchEngineQueryMaker 
-    {
+    public class SearchEngineQueryMaker : ISearchEngineQueryMaker
+    { 
         // Makes a single word query to the search engines passed as parameters and 
         // returns an enumerable collection of search engine query responses.
         public IEnumerable<SearchEngineQueryResponse> MakeNewQuery(string wordToSearch)
