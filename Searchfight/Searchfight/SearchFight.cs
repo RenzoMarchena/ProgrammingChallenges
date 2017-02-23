@@ -87,18 +87,18 @@ namespace Searchfight
         }
 
         static void FindAndPrintWinners(IEnumerable<SearchEngineQueryResponse> queriesResponses)
-        { 
-            //Finding the winner in Google
-            var googleQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == "Google");
-            
+        {
+            //Finding the wienner in Google
+            var googleQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == SearchEngine.Google);
+
             var googleWinnerMaxValue = googleQueriesResponses.Max(response => response.NumberOfResults);
-             
+
             SearchEngineQueryResponse googleWinner = queriesResponses.First(response => response.NumberOfResults == googleWinnerMaxValue);
 
             Console.WriteLine("Google winner: " + googleWinner.WordQueried);
-             
-            //Finding the winner in MSN Search
-            var msnSearchQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == "MSN Search");
+
+            //Finding the wienner in MSN Search
+            var msnSearchQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == SearchEngine.MSNSearch);
 
             var msnSearchWinnerMaxValue = msnSearchQueriesResponses.Max(response => response.NumberOfResults);
 

@@ -7,17 +7,17 @@ using Newtonsoft.Json.Linq;
 
 namespace Searchfight
 {
-    public class SearchEngineQueryMaker : ISearchEngineQueryMaker
-    { 
-        // Makes a single word query to the search engines passed as parameters and 
+    public class SearchEngineQueryMaker : ISearchEngineQueryMaker 
+    {
+        // Makes a single query to the search engines passed as parameters and 
         // returns an enumerable collection of search engine query responses.
         public IEnumerable<SearchEngineQueryResponse> MakeNewQuery(string wordToSearch)
         {
             var singleQueryResponses = new List<SearchEngineQueryResponse>();
 
-            singleQueryResponses.Add(QueryGoogle(wordToSearch));
-            singleQueryResponses.Add(QueryMSNSearch(wordToSearch));
-                
+                            singleQueryResponses.Add(QueryGoogle(wordToSearch));
+                            singleQueryResponses.Add(QueryMSNSearch(wordToSearch));
+
             return singleQueryResponses;
         }
 
@@ -88,7 +88,7 @@ namespace Searchfight
         private SearchEngineQueryResponse QueryMSNSearch(string wordToSearch)
         {
             var client = new HttpClient();
-             
+
             var apiKey = "1f3497a23ded414e9590844d2313fa72";
             var uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
 
