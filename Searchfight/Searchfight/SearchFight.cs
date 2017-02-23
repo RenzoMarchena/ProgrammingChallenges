@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Searchfight
 {
@@ -11,14 +10,12 @@ namespace Searchfight
         
         static void Main(string[] args)
         {
-            IEnumerable<string> wordsToSearch = parseArguments(args);
+            var wordsToSearch = parseArguments(args);
                                                                       
             ISearchEngineQueryMaker searchEngineQM = new SearchEngineQueryMaker();
 
-            IEnumerable<SearchEngineQueryResponse> queriesResponses = searchEngineQM.MakeNewBashQuery(wordsToSearch,
-                                                                                                       SearchEngine.Google,
-                                                                                                       SearchEngine.MSNSearch
-                                                                                                     );
+            var queriesResponses = searchEngineQM.MakeNewBashQuery(wordsToSearch);
+
             PrintResponses(queriesResponses);
 
             FindAndPrintWinners(queriesResponses);
@@ -28,7 +25,7 @@ namespace Searchfight
 
         static IEnumerable<string> parseArguments(string[] args)
         {
-            List<string> arguments = new List<string>();
+            var arguments = new List<string>();
 
             for (int i=0; i<args.Length;i++) {
                 if (args[i].StartsWith("\""))
@@ -61,20 +58,20 @@ namespace Searchfight
 
         static void PrintResponses(IEnumerable<SearchEngineQueryResponse> queriesResponses)
         {
-            foreach (SearchEngineQueryResponse searchEngineQR in queriesResponses)
+            foreach (var searchEngineQR in queriesResponses)
             {
                 
 
                 switch (searchEngineQR.SearchEngineUsed)
                 {
 
-                    case (SearchEngine.Google):
+                    case ("Google"):
                         {
                             Console.Write(searchEngineQR.WordQueried + ": ");
                             Console.Write("Google: " + searchEngineQR.NumberOfResults);
                             break;
                         }
-                    case (SearchEngine.MSNSearch):
+                    case ("MSN Search"):
                         {
 
                             Console.WriteLine(" MSN Search: " + searchEngineQR.NumberOfResults);
@@ -92,7 +89,7 @@ namespace Searchfight
         static void FindAndPrintWinners(IEnumerable<SearchEngineQueryResponse> queriesResponses)
         {
             //Finding the wienner in Google
-            var googleQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == SearchEngine.Google);
+            var googleQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == "Google");
 
             var googleWinnerMaxValue = googleQueriesResponses.Max(response => response.NumberOfResults);
 
@@ -101,7 +98,7 @@ namespace Searchfight
             Console.WriteLine("Google winner: " + googleWinner.WordQueried);
 
             //Finding the wienner in MSN Search
-            var msnSearchQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == SearchEngine.MSNSearch);
+            var msnSearchQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == "MSN Search");
 
             var msnSearchWinnerMaxValue = msnSearchQueriesResponses.Max(response => response.NumberOfResults);
 

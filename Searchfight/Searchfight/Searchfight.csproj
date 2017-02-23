@@ -49,7 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchEngineQueryMaker.cs" />
     <Compile Include="SearchEngineQueryResponse.cs" />
-    <Compile Include="SearchEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

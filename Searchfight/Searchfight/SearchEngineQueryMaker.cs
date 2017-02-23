@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
@@ -16,41 +11,27 @@ namespace Searchfight
     {
         // Makes a single word query to the search engines passed as parameters and 
         // returns an enumerable collection of search engine query responses.
-        public IEnumerable<SearchEngineQueryResponse> MakeNewQuery(string wordToSearch, params SearchEngine[] searchEngines )
+        public IEnumerable<SearchEngineQueryResponse> MakeNewQuery(string wordToSearch)
         {
-            List<SearchEngineQueryResponse> singleQueryResponses = new List<SearchEngineQueryResponse>();
+            var singleQueryResponses = new List<SearchEngineQueryResponse>();
 
-            for (int i = 0; i < searchEngines.Length; i++)
-            {
-                switch (searchEngines[i])
-                {
-                    case SearchEngine.Google:
-                        {
-                            singleQueryResponses.Add(QueryGoogle(wordToSearch));
-                            break;
-                        }
-                    case SearchEngine.MSNSearch:
-                        {
-                            singleQueryResponses.Add(QueryMSNSearch(wordToSearch));
-                            break;
-                        }   
-                }
-            }
-
+            singleQueryResponses.Add(QueryGoogle(wordToSearch));
+            singleQueryResponses.Add(QueryMSNSearch(wordToSearch));
+                
             return singleQueryResponses;
         }
 
         // Makes a bash query to the search engines passed as parameters and 
         // returns an enumerable collection of search engine query responses.
-        public IEnumerable<SearchEngineQueryResponse> MakeNewBashQuery(IEnumerable<string> wordsToSearch, params SearchEngine[] searchEngines )
+        public IEnumerable<SearchEngineQueryResponse> MakeNewBashQuery(IEnumerable<string> wordsToSearch)
         {
-            List<SearchEngineQueryResponse> bashQueryResponses = new List<SearchEngineQueryResponse>();
+            var bashQueryResponses = new List<SearchEngineQueryResponse>();
 
-            foreach (string word in wordsToSearch)
+            foreach (var word in wordsToSearch)
             {
-                IEnumerable<SearchEngineQueryResponse> singleQueryResponses = MakeNewQuery(word, searchEngines);
+                var singleQueryResponses = MakeNewQuery(word);
 
-                foreach (SearchEngineQueryResponse searchQR in singleQueryResponses)
+                foreach (var searchQR in singleQueryResponses)
                 {
                     bashQueryResponses.Add(searchQR);
                 }
@@ -64,25 +45,25 @@ namespace Searchfight
         // returns a search engine query response.
         private  SearchEngineQueryResponse QueryGoogle(string wordToSearch)
         {
-            HttpClient client = new HttpClient();
+            var client = new HttpClient();
 
-            string apiKey = "AIzaSyAs-bKqh7pFBemXadxNDJ6TsrtmAzsqDfY";
-            string customSearchEngineID = "017576662512468239146:omuauf_lfve";
-            string uri = "https://www.googleapis.com/customsearch/v1/";
+            var apiKey = "AIzaSyAs-bKqh7pFBemXadxNDJ6TsrtmAzsqDfY";
+            var customSearchEngineID = "017576662512468239146:omuauf_lfve";
+            var uri = "https://www.googleapis.com/customsearch/v1/";
 
             client.BaseAddress = new Uri(uri);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = client.GetAsync(client.BaseAddress.AbsolutePath + "?key="+ apiKey
+            var response = client.GetAsync(client.BaseAddress.AbsolutePath + "?key="+ apiKey
                                                                                            + "&cx=" + customSearchEngineID
                                                                                            + "&q="  + wordToSearch).Result;
 
-            string totalResults = "";
+            var totalResults = "";
 
             if (response.IsSuccessStatusCode)
             {
-                string strJson = response.Content.ReadAsStringAsync().Result;
+                var strJson = response.Content.ReadAsStringAsync().Result;
 
                 //Deserialize the string to JSON object
                 dynamic jObj = (JObject)JsonConvert.DeserializeObject(strJson);
@@ -91,9 +72,9 @@ namespace Searchfight
 
             }
 
-            SearchEngineQueryResponse searchEngineQR = new SearchEngineQueryResponse();
+            var searchEngineQR = new SearchEngineQueryResponse();
 
-            searchEngineQR.SearchEngineUsed = SearchEngine.Google;
+            searchEngineQR.SearchEngineUsed = "Google";
             searchEngineQR.WordQueried = wordToSearch;
             searchEngineQR.NumberOfResults = Convert.ToInt64(totalResults);
 
@@ -106,10 +87,10 @@ namespace Searchfight
         // returns a search engine query response.
         private SearchEngineQueryResponse QueryMSNSearch(string wordToSearch)
         {
-            HttpClient client = new HttpClient();
+            var client = new HttpClient();
 
-            string apiKey = "1f3497a23ded414e9590844d2313fa72";
-            string uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
+            var apiKey = "1f3497a23ded414e9590844d2313fa72";
+            var uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
 
             client.BaseAddress = new Uri(uri);
             client.DefaultRequestHeaders.Accept.Clear();
@@ -117,13 +98,13 @@ namespace Searchfight
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
            // ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
         
-            HttpResponseMessage response = client.GetAsync(client.BaseAddress.AbsolutePath + "?q=" + wordToSearch).Result;
+            var response = client.GetAsync(client.BaseAddress.AbsolutePath + "?q=" + wordToSearch).Result;
             
             long totalResults = 0;
 
             if (response.IsSuccessStatusCode)
             {
-                string strJson = response.Content.ReadAsStringAsync().Result;
+                var strJson = response.Content.ReadAsStringAsync().Result;
 
                //Deserialize the string to JSON object
                 dynamic jObj = (JObject)JsonConvert.DeserializeObject(strJson);
@@ -131,9 +112,9 @@ namespace Searchfight
                 totalResults = jObj["webPages"]["totalEstimatedMatches"];
             }
 
-            SearchEngineQueryResponse searchEngineQR = new SearchEngineQueryResponse();
+            var searchEngineQR = new SearchEngineQueryResponse();
 
-            searchEngineQR.SearchEngineUsed = SearchEngine.MSNSearch;
+            searchEngineQR.SearchEngineUsed = "MSN Search";
             searchEngineQR.WordQueried = wordToSearch;
             searchEngineQR.NumberOfResults = totalResults;
 
