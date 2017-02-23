@@ -1,112 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text.RegularExpressions;
+using SearchFight.Interfaces;
 
-
-namespace Searchfight
+namespace SearchFight
 {
     class SearchFight
     {
-        
+        private static IQueryMaker queryMaker; 
+        private static ISearchResultsAnalyzer searchResultsAnalyzer;
+
         static void Main(string[] args)
         {
-            var wordsToSearch = parseArguments(args);
-                                                                      
-            ISearchEngineQueryMaker searchEngineQM = new SearchEngineQueryMaker();
+            Bootstrap.Start();
 
-            var queriesResponses = searchEngineQM.MakeNewBashQuery(wordsToSearch);
+            queryMaker = Bootstrap.container.GetInstance<IQueryMaker>();
+            searchResultsAnalyzer = Bootstrap.container.GetInstance<ISearchResultsAnalyzer>();
 
-            PrintResponses(queriesResponses);
+            var programmingLanguages = ParseArguments(args);
 
-            FindAndPrintWinners(queriesResponses);
+            var searchResults = queryMaker.QuerySearchEngines(programmingLanguages);
 
-            Console.ReadLine();
-        }
-
-        static IEnumerable<string> parseArguments(string[] args)
-        {
-            var arguments = new List<string>();
-
-            for (int i=0; i<args.Length;i++) {
-                if (args[i].StartsWith("\""))
-                {
-                    string arg = args[i].Substring(1);
-                    int j = i + 1;
-
-                    while (!args[j].EndsWith("\"") )
-                    {
-                        arg += " ";
-                        arg += args[j];
-                        j++;
-                    }
-
-                    arg += " ";
-                    arg += args[j].TrimEnd('"');
-
-                    arguments.Add(arg);
-
-                    i = j;
-                }
-                else
-                {
-                    arguments.Add(args[i]);
-                }
-            }
-            return arguments;
+            var resultsByProgrammingLanguage = searchResultsAnalyzer.GetResultsByProgrammingLanguage(searchResults);
+            var winnersBySearchEngine = searchResultsAnalyzer.GetWinnerBySearchEngine(searchResults);
+           
+            ResultsPrinter.Print(resultsByProgrammingLanguage,winnersBySearchEngine);
 
         }
 
-        static void PrintResponses(IEnumerable<SearchEngineQueryResponse> queriesResponses)
+        static IEnumerable<string> ParseArguments(string[] args)
         {
-            foreach (var searchEngineQR in queriesResponses)
+
+            var programmingLanguages = new List<string>();
+
+            // Join the arguments array to split it in a more useful way
+            var arguments = String.Join(" ", args);
+
+            // Extract Programming Languages that are between quotation marks to allow spaces 
+            var pattern = "\"[^\"]*\"";
+     
+            foreach (var programmingLanguage in Regex.Matches(arguments, pattern))
             {
-                
-
-                switch (searchEngineQR.SearchEngineUsed)
-                {
-
-                    case ("Google"):
-                        {
-                            Console.Write(searchEngineQR.WordQueried + ": ");
-                            Console.Write("Google: " + searchEngineQR.NumberOfResults);
-                            break;
-                        }
-                    case ("MSN Search"):
-                        {
-
-                            Console.WriteLine(" MSN Search: " + searchEngineQR.NumberOfResults);
-                            break;
-                        }
-                }
-                                  
-
-
+                programmingLanguages.Add(programmingLanguage.ToString().Replace('"',' '));
+                arguments = arguments.Replace(programmingLanguage.ToString(), "");
             }
-          
 
-        }
+            //Extract the other Programming Languages
+            string[] otherProgrammingLanguages  = arguments.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
 
-        static void FindAndPrintWinners(IEnumerable<SearchEngineQueryResponse> queriesResponses)
-        {
-            //Finding the wienner in Google
-            var googleQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == "Google");
+            foreach (var programmingLanguage in otherProgrammingLanguages)
+                programmingLanguages.Add(programmingLanguage);
 
-            var googleWinnerMaxValue = googleQueriesResponses.Max(response => response.NumberOfResults);
+            return programmingLanguages;
 
-            SearchEngineQueryResponse googleWinner = queriesResponses.First(response => response.NumberOfResults == googleWinnerMaxValue);
-
-            Console.WriteLine("Google winner: " + googleWinner.WordQueried);
-
-            //Finding the wienner in MSN Search
-            var msnSearchQueriesResponses = queriesResponses.Where(response => response.SearchEngineUsed == "MSN Search");
-
-            var msnSearchWinnerMaxValue = msnSearchQueriesResponses.Max(response => response.NumberOfResults);
-
-            SearchEngineQueryResponse msnSearchWinner = queriesResponses.First(response => response.NumberOfResults == msnSearchWinnerMaxValue);
-
-            Console.WriteLine("MSN Search winner: " + msnSearchWinner.WordQueried);
         }
 
     }
-
 }

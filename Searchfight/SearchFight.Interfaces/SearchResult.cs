@@ -1,12 +1,11 @@
 ﻿
-
-namespace Searchfight
+namespace SearchFight.Interfaces
 {
-    public class SearchEngineQueryResponse
+    public class SearchResult
     {
         public string SearchEngineUsed { get; set; } 
 
-        public string WordQueried { get; set; }
+        public string Query { get; set; }
 
         public long NumberOfResults { get; set; }
 
