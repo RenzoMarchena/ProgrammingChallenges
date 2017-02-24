@@ -11,7 +11,7 @@ namespace SearchFight.SearchEngines
         private string uri = "https://www.googleapis.com/customsearch/v1/";
         
 
-        public SearchResult Search(string stringToSearch)
+        public SearchResult Search(string stringToSearch) 
        {
             return Search(this.uri, stringToSearch);
         }

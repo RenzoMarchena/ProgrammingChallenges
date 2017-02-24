@@ -14,24 +14,28 @@ namespace SearchFight.Tests
         [TestMethod()]
         public void QuerySearchEnginesTest()
         {
-            var queryMaker = new QueryMaker();
+            
+            RunTest(new string[] { "java", "c#", "ruby on rails" });
+            RunTest(new string[] { "java script"});
+            RunTest(new string[] { "java script", "c#" });
+            RunTest(new string[] { "java script", "c#", "Ruby on Rails","Visual Basic" });
+            RunTest(new string[] { "java script", "c#", "Ruby on Rails", "Visual Basic", ".net" });
+            
+        }
 
-            var searchResults = queryMaker.QuerySearchEngines(new string[] { "java", "c#", " ruby on rails " });
+        public void RunTest(string[] sampleInput)
+        {
+            var queryMaker = new QueryMaker();
+            var searchResults = queryMaker.QuerySearchEngines(sampleInput);
 
             //Make sure that the queryMaker returns results for every query
+            //Also make sure that all the Terms given as parammeters were searched
             foreach (var searchResult in searchResults)
             {
-                Assert.IsTrue(searchResult.NumberOfResults > 0);
+                Assert.IsTrue(searchResult.NumberOfResults >= 0);
+                int pos = Array.IndexOf(sampleInput, searchResult.Query);
+                Assert.IsTrue(pos > -1);
             }
-
-            //Make sure that the Terms searched were the same as the ones given as parammeters
-
-          /*  var termSearched = searchResults.Select(searchResult => (new { searchResult.Query }).ToString());
-
-            Assert.IsTrue(termSearched.Intersect(new string[] { "java", "c#", " ruby on rails " }).Count() == 2);
-
-           */
-
         }
     }
 }

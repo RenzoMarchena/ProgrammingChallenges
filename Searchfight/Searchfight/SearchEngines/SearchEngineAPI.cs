@@ -35,6 +35,8 @@ namespace SearchFight.SearchEngines
             else
             {
                 //handle TimeOut here
+                throw new TimeoutException(); 
+
             }
             var searchResult = new SearchResult();
 
