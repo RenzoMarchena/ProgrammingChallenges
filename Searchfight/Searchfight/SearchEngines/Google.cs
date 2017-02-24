@@ -13,7 +13,7 @@ namespace SearchFight.SearchEngines
 
         public SearchResult Search(string stringToSearch) 
        {
-            return Search(this.uri, stringToSearch);
+                return Search(this.uri, stringToSearch);    
         }
 
         public override string AddParammeters(string absolutePath, string stringToSearch)

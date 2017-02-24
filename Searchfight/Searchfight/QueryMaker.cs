@@ -17,8 +17,16 @@ namespace SearchFight
             {
                 foreach (var searchEngine in supportedSearchEngines)
                 {
-                    var searchResult = searchEngine.Search(query);
-                    searchResults.Add(searchResult);
+                    try
+                    {
+                        var searchResult = searchEngine.Search(query);
+                        searchResults.Add(searchResult);
+                    }
+                    catch (TimeoutException ex)
+                    {
+
+
+                    }
                 }
             }
 
