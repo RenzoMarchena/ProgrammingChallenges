@@ -23,10 +23,7 @@ namespace SearchFight
                         searchResults.Add(searchResult);
                     }
                     catch (TimeoutException ex)
-                    {
-
-
-                    }
+                    {}
                 }
             }
 
