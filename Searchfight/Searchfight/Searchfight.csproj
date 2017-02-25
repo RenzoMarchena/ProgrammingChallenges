@@ -48,10 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrap.cs" />
-    <Compile Include="ResultsPrinter.cs" />
+    <Compile Include="Controller\SearchFightController.cs" />
+    <Compile Include="Exceptions\NoInternetConnectionException.cs" />
+    <Compile Include="Exceptions\TimeOutException.cs" />
+    <Compile Include="Model\SearchResult.cs" />
+    <Compile Include="View\ResultsPrinter.cs" />
     <Compile Include="SearchEngines\SearchEngineAPI.cs" />
-    <Compile Include="SearchResultsAnalyzer.cs" />
     <Compile Include="SearchEngines\Google.cs" />
     <Compile Include="SearchEngines\MSNSearch.cs" />
     <Compile Include="SearchFight.cs" />

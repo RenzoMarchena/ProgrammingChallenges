@@ -28,7 +28,7 @@ namespace SearchFight.Tests
                 Assert.IsTrue(searchResult.Query == stringToSearch);
                 Assert.IsTrue(searchResult.SearchEngineUsed == "MSN Search");
             }
-            catch (TimeoutException ex)
+            catch (Exception ex)
             { }
         }
     }

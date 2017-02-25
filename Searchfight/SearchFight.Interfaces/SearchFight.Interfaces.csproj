@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="IQueryMaker.cs" />
     <Compile Include="ISearch.cs" />
-    <Compile Include="ISearchResultsAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchResult.cs" />
   </ItemGroup>

@@ -35,7 +35,7 @@ namespace SearchFight.Tests
                     Assert.IsTrue(pos > -1);
                 }
             }
-            catch (TimeoutException ex)
+            catch (Exception ex)
             { }
         }
     }

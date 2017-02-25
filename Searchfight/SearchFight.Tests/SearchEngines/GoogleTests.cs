@@ -29,7 +29,7 @@ namespace SearchFight.Tests
                 Assert.IsTrue(searchResult.Query == stringToSearch);
                 Assert.IsTrue(searchResult.SearchEngineUsed == "Google");
             }
-            catch (TimeoutException ex)
+            catch (Exception ex)
             {
 
             }

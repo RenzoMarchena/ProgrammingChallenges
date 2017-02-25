@@ -4,6 +4,8 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SearchFight.Interfaces;
+using SearchFight.Exceptions;
+
 
 namespace SearchFight.SearchEngines
 {
@@ -19,7 +21,17 @@ namespace SearchFight.SearchEngines
 
             AddApiKey(client);
 
-            var response = client.GetAsync(AddParammeters(client.BaseAddress.AbsolutePath,stringToSearch)).Result;
+            HttpResponseMessage response;
+
+            try
+            {
+                response = client.GetAsync(AddParammeters(client.BaseAddress.AbsolutePath, stringToSearch)).Result;
+            }
+            catch (AggregateException ex)
+            {
+                throw new NoInternetConnectionException();
+            }
+
 
             long totalResults = 0;
 
@@ -35,7 +47,7 @@ namespace SearchFight.SearchEngines
             else
             {
                 //handle TimeOut here
-                throw new TimeoutException(); 
+                throw new TimeOutException(); 
 
             }
             var searchResult = new SearchResult();

@@ -1,12 +1,32 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using SearchFight.Interfaces;
 
 namespace SearchFight
 {
-    public class SearchResultsAnalyzer : ISearchResultsAnalyzer
+    public class ResultsPrinter
     {
-        public IEnumerable<string> GetResultsByProgrammingLanguage(IEnumerable<SearchResult> searchResults)
+        public static void Print(IEnumerable<Model.SearchResult> searchResults)
+        {
+
+            var resultsByProgrammingLanguage = GetResultsByProgrammingLanguage(searchResults);
+            var winnersBySearchEngine = GetWinnerBySearchEngine(searchResults);
+            
+            foreach (var result in resultsByProgrammingLanguage)
+            {
+                Console.WriteLine(result);
+            }
+
+            foreach (var winner in winnersBySearchEngine)
+            {
+                Console.WriteLine(winner);
+            }
+
+            Console.ReadLine();
+        }
+
+
+        public static IEnumerable<string> GetResultsByProgrammingLanguage(IEnumerable<Model.SearchResult> searchResults)
         {
             var results = new List<string>();
 
@@ -18,7 +38,7 @@ namespace SearchFight
             {
                 var result = group.Key + ": ";
 
-                foreach (var searchResult in group )
+                foreach (var searchResult in group)
                 {
                     result += searchResult.SearchEngineUsed + ": " + searchResult.NumberOfResults + " ";
                 }
@@ -29,12 +49,13 @@ namespace SearchFight
             return results;
         }
 
-        public IEnumerable<string> GetWinnerBySearchEngine(IEnumerable<SearchResult> searchResults)
+
+        public static IEnumerable<string> GetWinnerBySearchEngine(IEnumerable<Model.SearchResult> searchResults)
         {
             var results = new List<string>();
 
             //Group SearchResults by SearchEngine
-            var searchResultsBySearchEngine = searchResults.GroupBy(searchResult =>  searchResult.SearchEngineUsed );
+            var searchResultsBySearchEngine = searchResults.GroupBy(searchResult => searchResult.SearchEngineUsed);
 
             //For each Group find the word with the max number or Results
             foreach (var group in searchResultsBySearchEngine)
