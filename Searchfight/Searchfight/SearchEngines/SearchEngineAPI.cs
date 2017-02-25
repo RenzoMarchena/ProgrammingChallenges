@@ -9,7 +9,8 @@ namespace SearchFight.SearchEngines
 {
     public abstract class SearchEngineAPI
     {
-        public SearchResult Search(string uri, string stringToSearch)
+        private string uri;
+        public SearchResult Search(string stringToSearch)
         {
             var client = new HttpClient();
 
