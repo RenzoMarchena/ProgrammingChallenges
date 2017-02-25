@@ -9,10 +9,14 @@ namespace SearchFight.SearchEngines
         private string apiKey = "AIzaSyAs-bKqh7pFBemXadxNDJ6TsrtmAzsqDfY";
         private string customSearchEngineID = "017576662512468239146:omuauf_lfve";
         private string uri = "https://www.googleapis.com/customsearch/v1/";
-        
+
+        public override string GetUri()
+        {
+            return uri;
+        }
         public override string AddParammeters(string absolutePath, string stringToSearch)
         {
-            return absolutePath + "?key=" + this.apiKey + "&cx=" + this.customSearchEngineID + "&q=" + stringToSearch;
+            return absolutePath + "?key=" + apiKey + "&cx=" + customSearchEngineID + "&q=" + stringToSearch;
         }
 
         public override void AddApiKey(HttpClient client)

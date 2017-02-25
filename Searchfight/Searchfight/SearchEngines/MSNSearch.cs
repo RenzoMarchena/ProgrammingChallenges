@@ -8,6 +8,10 @@ namespace SearchFight.SearchEngines
         private string apiKey = "1f3497a23ded414e9590844d2313fa72";
         private string uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
 
+        public override string GetUri()
+        {
+            return uri;
+        }
         public override string AddParammeters(string absolutePath, string stringToSearch)
         {
             return absolutePath + "?q=" + stringToSearch;

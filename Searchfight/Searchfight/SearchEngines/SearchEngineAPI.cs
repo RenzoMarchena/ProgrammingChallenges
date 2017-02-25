@@ -9,12 +9,11 @@ namespace SearchFight.SearchEngines
 {
     public abstract class SearchEngineAPI
     {
-        private string uri;
         public SearchResult Search(string stringToSearch)
         {
             var client = new HttpClient();
 
-            client.BaseAddress = new Uri(uri);
+            client.BaseAddress = new Uri(GetUri());
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -53,5 +52,7 @@ namespace SearchFight.SearchEngines
         public abstract void AddApiKey(HttpClient client);
 
         public abstract long GetTotalResults(dynamic jObj);
+
+        public abstract string GetUri();
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
 using SearchFight.Interfaces;
+using System.Net;
 
 namespace SearchFight
 {
@@ -23,7 +24,9 @@ namespace SearchFight
                         searchResults.Add(searchResult);
                     }
                     catch (TimeoutException ex)
-                    {}
+                    { }
+                    catch (WebException ex)
+                    { }
                 }
             }
 
