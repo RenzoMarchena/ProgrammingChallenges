@@ -6,11 +6,10 @@ namespace SearchFight.Controller
 {
     public class SearchFightController
     {
-        private static IQueryMaker queryMaker;
+        private static IQueryMaker queryMaker = SearchFight.container.GetInstance<IQueryMaker>();
 
         public static void StartSearchFight(string[] programmingLanguages)
         {
-            queryMaker = SearchFight.container.GetInstance<IQueryMaker>();
 
             var searchResults = queryMaker.QuerySearchEngines(programmingLanguages);
            
@@ -31,6 +30,5 @@ namespace SearchFight.Controller
             ResultsPrinter.Print(model);
 
         }
-
     }
 }

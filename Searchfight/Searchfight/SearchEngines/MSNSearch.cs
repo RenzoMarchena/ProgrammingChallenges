@@ -1,5 +1,4 @@
 ﻿using System.Net.Http;
-using SearchFight.Interfaces;
 
 namespace SearchFight.SearchEngines
 {
