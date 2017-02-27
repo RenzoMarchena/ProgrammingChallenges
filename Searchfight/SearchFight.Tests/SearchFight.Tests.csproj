@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchEngines\GoogleTests.cs" />
     <Compile Include="SearchEngines\MSNSearchTests.cs" />
-    <Compile Include="SearchResultsAnalyzerTests.cs" />
+    <Compile Include="View\ResultsPrinterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SearchFight.Interfaces\SearchFight.Interfaces.csproj">
