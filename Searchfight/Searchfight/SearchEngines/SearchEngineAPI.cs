@@ -9,7 +9,7 @@ using SearchFight.Exceptions;
 
 namespace SearchFight.SearchEngines
 {
-    public abstract class SearchEngineAPI
+    public abstract class SearchEngine:ISearchEngine
     {
         public SearchResult Search(string stringToSearch)
         {

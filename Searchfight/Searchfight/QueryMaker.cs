@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
 using SearchFight.Interfaces;
+using SearchFight.SearchEngines;
 
 namespace SearchFight
 {
@@ -26,13 +27,13 @@ namespace SearchFight
   
         }
 
-        private IEnumerable<ISearch> GetSupportedSearchEngines()
+        private IEnumerable<ISearchEngine> GetSupportedSearchEngines()
         {
 
             var supportedSearchEngines = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                         where t.GetInterfaces().Contains(typeof(ISearch))
+                                         where t.GetInterfaces().Contains(typeof(ISearchEngine))
                                          && t.GetConstructor(Type.EmptyTypes) != null
-                                         select Activator.CreateInstance(t) as ISearch;
+                                         select Activator.CreateInstance(t) as ISearchEngine;
 
             return supportedSearchEngines;
 

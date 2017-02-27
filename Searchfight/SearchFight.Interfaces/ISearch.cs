@@ -1,7 +1,7 @@
 ﻿
 namespace SearchFight.Interfaces
 {
-    public interface ISearch
+    public interface ISearchEngine
     {
        SearchResult Search(string stringToSearch); 
 

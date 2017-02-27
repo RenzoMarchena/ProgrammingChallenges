@@ -4,7 +4,7 @@ using SearchFight.Interfaces;
 
 namespace SearchFight.SearchEngines
 {
-    public class Google : SearchEngineAPI, ISearch
+    public class Google : SearchEngine
     {
         private string apiKey = "AIzaSyAs-bKqh7pFBemXadxNDJ6TsrtmAzsqDfY";
         private string customSearchEngineID = "017576662512468239146:omuauf_lfve";

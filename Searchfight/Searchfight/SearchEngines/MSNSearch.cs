@@ -3,7 +3,7 @@ using SearchFight.Interfaces;
 
 namespace SearchFight.SearchEngines
 {
-    public class MSNSearch : SearchEngineAPI, ISearch
+    public class MSNSearch : SearchEngine
     {
         private string apiKey = "1f3497a23ded414e9590844d2313fa72";
         private string uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
