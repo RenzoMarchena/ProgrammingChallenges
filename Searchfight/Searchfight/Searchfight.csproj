@@ -53,7 +53,7 @@
     <Compile Include="Exceptions\TimeOutException.cs" />
     <Compile Include="Model\SearchResult.cs" />
     <Compile Include="View\ResultsPrinter.cs" />
-    <Compile Include="SearchEngines\SearchEngineAPI.cs" />
+    <Compile Include="SearchEngines\SearchEngine.cs" />
     <Compile Include="SearchEngines\Google.cs" />
     <Compile Include="SearchEngines\MSNSearch.cs" />
     <Compile Include="SearchFight.cs" />
