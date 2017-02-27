@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using SearchFight.Interfaces;
-
+using SearchFight.View;
 
 namespace SearchFight.Controller
 {

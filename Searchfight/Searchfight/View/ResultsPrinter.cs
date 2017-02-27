@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SearchFight
+namespace SearchFight.View
 {
     public class ResultsPrinter
     {

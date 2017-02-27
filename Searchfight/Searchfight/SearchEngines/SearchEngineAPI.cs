@@ -59,12 +59,12 @@ namespace SearchFight.SearchEngines
             return searchResult;
         }
 
-        public abstract string AddParammeters(string absolutePath, string stringToSearch);
+        protected abstract string AddParammeters(string absolutePath, string stringToSearch);
 
-        public abstract void AddApiKey(HttpClient client);
+        protected abstract void AddApiKey(HttpClient client);
 
-        public abstract long GetTotalResults(dynamic jObj);
+        protected abstract long GetTotalResults(dynamic jObj);
 
-        public abstract string GetUri();
+        protected abstract string GetUri();
     }
 }

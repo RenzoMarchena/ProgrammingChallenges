@@ -10,21 +10,21 @@ namespace SearchFight.SearchEngines
         private string customSearchEngineID = "017576662512468239146:omuauf_lfve";
         private string uri = "https://www.googleapis.com/customsearch/v1/";
 
-        public override string GetUri()
+        protected override string GetUri()
         {
             return uri;
         }
-        public override string AddParammeters(string absolutePath, string stringToSearch)
+        protected override string AddParammeters(string absolutePath, string stringToSearch)
         {
             return absolutePath + "?key=" + apiKey + "&cx=" + customSearchEngineID + "&q=" + stringToSearch;
         }
 
-        public override void AddApiKey(HttpClient client)
+        protected override void AddApiKey(HttpClient client)
         {
             
         }
 
-        public override long GetTotalResults(dynamic jObj)
+        protected override long GetTotalResults(dynamic jObj)
         {
             return Convert.ToInt64(jObj["queries"]["request"][0]["totalResults"]);
         }
