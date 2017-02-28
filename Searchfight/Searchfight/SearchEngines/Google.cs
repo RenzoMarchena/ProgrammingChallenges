@@ -5,9 +5,9 @@ namespace SearchFight.SearchEngines
 {
     public class Google : SearchEngine
     {
-        private string apiKey = "AIzaSyAs-bKqh7pFBemXadxNDJ6TsrtmAzsqDfY";
-        private string customSearchEngineID = "017576662512468239146:omuauf_lfve";
-        private string uri = "https://www.googleapis.com/customsearch/v1/";
+        private readonly string apiKey = "AIzaSyAs-bKqh7pFBemXadxNDJ6TsrtmAzsqDfY";
+        private readonly string customSearchEngineID = "017576662512468239146:omuauf_lfve";
+        private readonly string uri = "https://www.googleapis.com/customsearch/v1/";
 
         protected override string GetUri()
         {

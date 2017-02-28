@@ -1,8 +1,7 @@
 ﻿using System;
 using SearchFight.Interfaces;
-using SimpleInjector;
 using SearchFight.Controller;
-
+using SimpleInjector;
 
 namespace SearchFight
 {

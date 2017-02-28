@@ -6,7 +6,6 @@ using Newtonsoft.Json.Linq;
 using SearchFight.Interfaces;
 using SearchFight.Exceptions;
 
-
 namespace SearchFight.SearchEngines
 {
     public abstract class SearchEngine:ISearchEngine
