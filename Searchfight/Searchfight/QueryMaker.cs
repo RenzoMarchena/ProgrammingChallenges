@@ -8,10 +8,20 @@ namespace SearchFight
 {
     public class QueryMaker : IQueryMaker 
     {
+        private IEnumerable<ISearchEngine> supportedSearchEngines;
+        public QueryMaker()
+        {
+            supportedSearchEngines = GetSupportedSearchEngines();
+        }
+
+        public QueryMaker(IEnumerable<ISearchEngine> supportedSearchEngines)
+        {
+            this.supportedSearchEngines = supportedSearchEngines;
+        }
+
         public IEnumerable<SearchResult> QuerySearchEngines(IEnumerable<string> queries)
         {
             var searchResults = new List<SearchResult>();
-            var supportedSearchEngines = GetSupportedSearchEngines();
 
             foreach (var query in queries)
             {
