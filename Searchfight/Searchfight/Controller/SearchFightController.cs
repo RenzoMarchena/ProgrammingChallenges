@@ -1,14 +1,26 @@
 ﻿using System.Collections.Generic;
 using SearchFight.Interfaces;
 using SearchFight.View;
+using System;
 
 namespace SearchFight.Controller
 {
     public class SearchFightController
     {
-        private static IQueryMaker queryMaker = SearchFight.container.GetInstance<IQueryMaker>();
+        private IQueryMaker queryMaker; 
 
-        public static void StartSearchFight(string[] programmingLanguages)
+        public SearchFightController()
+        {
+            this.queryMaker = SearchFight.container.GetInstance<IQueryMaker>();
+        }
+
+        public SearchFightController(IQueryMaker queryMaker)
+        {
+            if (queryMaker == null) throw new ArgumentNullException("queryMaker"); 
+            this.queryMaker = queryMaker;
+        }
+
+        public void StartSearchFight(string[] programmingLanguages)
         {
 
             var searchResults = queryMaker.QuerySearchEngines(programmingLanguages);

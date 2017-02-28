@@ -19,7 +19,8 @@ namespace SearchFight
 
             try
             {
-                SearchFightController.StartSearchFight(programmingLanguages);
+                var searchFightCon = new SearchFightController();
+                searchFightCon.StartSearchFight(programmingLanguages);
             }
             catch (Exception ex)
             {
