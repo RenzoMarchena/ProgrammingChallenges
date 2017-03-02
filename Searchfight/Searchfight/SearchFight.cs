@@ -2,6 +2,7 @@
 using SearchFight.Dependencies;
 using SearchFight.Interfaces;
 using SearchFight.Controller;
+using SearchFight.View;
 
 namespace SearchFight
 {
@@ -18,7 +19,8 @@ namespace SearchFight
             try
             {
                 var searchFightCon = new SearchFightController(queryMaker);
-                searchFightCon.StartSearchFight(programmingLanguages);
+                var viewModel = searchFightCon.StartSearchFight(programmingLanguages);
+                ResultsPrinter.Print(viewModel);
             }
             catch (Exception ex)
             {

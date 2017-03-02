@@ -75,8 +75,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controller\SearchFightControllerTests.cs" />
     <Compile Include="HttpHandlerMocks\HttpHandlerMockGoogle.cs" />
     <Compile Include="HttpHandlerMocks\HttpHandlerMockMSNSearch.cs" />
+    <Compile Include="HttpHandlerMocks\HttpHandlerMockTimeOut.cs" />
+    <Compile Include="QueryMakerMock.cs" />
     <Compile Include="SearchEnginesMocks\GoogleMock.cs" />
     <Compile Include="SearchEnginesMocks\MSNSearchMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SearchFight.Implementations.SearchEngines;
 using SearchFight.Tests.HttpHandlerMocks;
+using SearchFight.Exceptions;
 
 namespace SearchFight.Tests
 {
@@ -23,6 +24,22 @@ namespace SearchFight.Tests
             Assert.AreEqual("Google", searchResult.SearchEngineUsed);
 
         }
-       
+
+        [TestMethod()]
+        [ExpectedException(typeof(TimeOutException))]
+        public void CannotSearchGoogleWhenTimeOut()
+        {
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockTimeOut();
+            var google = new Google(fakeHttpHandler);
+
+            //Act
+            var searchResult = google.Search(".net");
+
+            //Assert
+            
+
+        }
+
     }
 }

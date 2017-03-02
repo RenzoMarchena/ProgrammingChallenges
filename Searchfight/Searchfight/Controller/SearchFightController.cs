@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using SearchFight.Interfaces;
 using SearchFight.ViewModel;
-using SearchFight.View;
 using System;
 
 namespace SearchFight.Controller
@@ -16,7 +15,7 @@ namespace SearchFight.Controller
             this.queryMaker = queryMaker;
         }
 
-        public void StartSearchFight(string[] programmingLanguages)
+        public IEnumerable<SearchResult> StartSearchFight(string[] programmingLanguages)
         {
             var searchResults = queryMaker.QuerySearchEngines(programmingLanguages);
            
@@ -34,7 +33,7 @@ namespace SearchFight.Controller
 
             }
 
-            ResultsPrinter.Print(viewModel);
+            return viewModel;
 
         }
     }

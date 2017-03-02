@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SearchFight.Implementations.SearchEngines;
 using SearchFight.Tests.HttpHandlerMocks;
+using SearchFight.Exceptions;
 
 namespace SearchFight.Tests
 {
@@ -12,15 +13,31 @@ namespace SearchFight.Tests
         {
             //Arrange
             var fakeHttpHandler = new HttpHandlerMockMSNSearch();
-            var google = new MSNSearch(fakeHttpHandler);
+            var msnSearch = new MSNSearch(fakeHttpHandler);
 
             //Act
-            var searchResult = google.Search("java");
+            var searchResult = msnSearch.Search("java");
 
             //Assert
             Assert.AreEqual("java", searchResult.Query);
             Assert.AreEqual(13300000, searchResult.NumberOfResults);
             Assert.AreEqual("MSN Search", searchResult.SearchEngineUsed);
+
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(TimeOutException))]
+        public void CannotSearchMSNSearchWhenTimeOut()
+        {
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockTimeOut();
+            var msnSearch = new MSNSearch(fakeHttpHandler);
+
+            //Act
+            var searchResult = msnSearch.Search("java");
+
+            //Assert
+
 
         }
     }

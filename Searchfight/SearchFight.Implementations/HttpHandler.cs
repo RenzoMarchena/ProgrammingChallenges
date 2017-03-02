@@ -44,7 +44,7 @@ namespace SearchFight.Implementations
 
         public void AddRequestHeader(string name,string value)
         {
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", value);
+            client.DefaultRequestHeaders.Add(name, value);
         }
     }
 }
