@@ -1,34 +1,27 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using SearchFight.Implementations.SearchEngines;
+using SearchFight.Tests.HttpHandlerMocks;
 
 namespace SearchFight.Tests
-{/*
+{
     [TestClass()]
     public class MSNSearchTests
     {
-        [TestMethod()]
-        public void SearchTest()
+       [TestMethod()]
+        public void SearchingMSNSearchReturnsValidSearchResult()
         {
-            RunTest("java");
-            RunTest("java script");
-            RunTest("  java");
-            RunTest("Ruby on Rails");
-            RunTest("C#");
-        }
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockMSNSearch();
+            var google = new MSNSearch(fakeHttpHandler);
 
-        private void RunTest(string stringToSearch)
-        {
-            try
-            {
-                var msnSearch = new MSNSearch();
-                var searchResult = msnSearch.Search(stringToSearch);
+            //Act
+            var searchResult = google.Search("java");
 
-                Assert.IsTrue(searchResult.NumberOfResults > 0);
-                Assert.IsTrue(searchResult.Query == stringToSearch);
-                Assert.IsTrue(searchResult.SearchEngineUsed == "MSN Search");
-            }
-            catch (Exception ex)
-            { }
+            //Assert
+            Assert.AreEqual("java", searchResult.Query);
+            Assert.AreEqual(13300000, searchResult.NumberOfResults);
+            Assert.AreEqual("MSN Search", searchResult.SearchEngineUsed);
+
         }
-    }*/
+    }
 }

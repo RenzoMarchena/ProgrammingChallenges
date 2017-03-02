@@ -1,37 +1,28 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using SearchFight.Implementations.SearchEngines;
+using SearchFight.Tests.HttpHandlerMocks;
 
 namespace SearchFight.Tests
-{/*
+{
     [TestClass()]
     public class GoogleTests
     {
         [TestMethod()]
-        public void SearchTest()
+        public void SearchingGoogleReturnsValidSearchResult()
         {
-            RunTest("java");
-            RunTest("java script");
-            RunTest("  java");
-            RunTest("Ruby on Rails");
-            RunTest("C#");
-                        
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockGoogle();
+            var google = new Google(fakeHttpHandler);
+
+            //Act
+            var searchResult = google.Search(".net");
+
+            //Assert
+            Assert.AreEqual(".net", searchResult.Query);
+            Assert.AreEqual(1560000000, searchResult.NumberOfResults);
+            Assert.AreEqual("Google", searchResult.SearchEngineUsed);
+
         }
-
-        private void RunTest(string stringToSearch)
-        {
-            try
-            {
-                var google = new Google();
-                var searchResult = google.Search(stringToSearch);
-
-                Assert.IsTrue(searchResult.NumberOfResults > 0);
-                Assert.IsTrue(searchResult.Query == stringToSearch);
-                Assert.IsTrue(searchResult.SearchEngineUsed == "Google");
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-    }*/
+       
+    }
 }

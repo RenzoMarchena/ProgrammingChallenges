@@ -1,0 +1,348 @@
+﻿{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - .net",
+        "totalResults": "1560000000",
+        "searchTerms": ".net",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "017576662512468239146:omuauf_lfve"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - .net",
+        "totalResults": "1560000000",
+        "searchTerms": ".net",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "017576662512468239146:omuauf_lfve"
+      }
+    ]
+  },
+  "context": {
+    "title": "CS Curriculum",
+    "facets": [
+      [
+        {
+          "label": "lectures",
+          "anchor": "Lectures",
+          "label_with_op": "more:lectures"
+        }
+      ],
+      [
+        {
+          "label": "assignments",
+          "anchor": "Assignments",
+          "label_with_op": "more:assignments"
+        }
+      ],
+      [
+        {
+          "label": "reference",
+          "anchor": "Reference",
+          "label_with_op": "more:reference"
+        }
+      ]
+    ]
+  },
+  "searchInformation": {
+    "searchTime": 0.320088,
+    "formattedSearchTime": "0.32",
+    "totalResults": "1560000000",
+    "formattedTotalResults": "1,560,000,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Learning Centre Prototype Deployment –Using .Net Framework",
+      "htmlTitle": "Learning Centre Prototype Deployment –Using .<b>Net</b> Framework",
+      "link": "https://www.cs.ubc.ca/wccce/program04/Papers/abhijit.pdf",
+      "displayLink": "www.cs.ubc.ca",
+      "snippet": "environment. The “Learning Centre Prototype Deployment –Using .Net \nFramework” project was initiated to explore the suitability of Microsoft .NET \nplatform as an ...",
+      "htmlSnippet": "environment. The “Learning Centre Prototype Deployment –Using .<b>Net</b> <br>\nFramework” project was initiated to explore the suitability of Microsoft .<b>NET</b> <br>\nplatform as an&nbsp;...",
+      "cacheId": "C6itMCh-Mb8J",
+      "mime": "application/pdf",
+      "fileFormat": "PDF/Adobe Acrobat",
+      "formattedUrl": "https://www.cs.ubc.ca/wccce/program04/Papers/abhijit.pdf",
+      "htmlFormattedUrl": "https://www.cs.ubc.ca/wccce/program04/Papers/abhijit.pdf",
+      "pagemap": {
+        "metatags": [
+          {
+            "moddate": "D:20040425151241-07'00",
+            "creationdate": "D:20040425151222-07'00",
+            "title": "Learning Centre Prototype Deployment",
+            "creator": "Acrobat PDFMaker 6.0 for Word",
+            "producer": "Acrobat Distiller 6.0 (Windows)",
+            "author": "Dr A. Sen et.al",
+            "subject": "Using .NET FRamework",
+            "company": "Kwantlen University College",
+            "sourcemodified": "D:20040414005514"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "A Roadmap to .NET",
+      "htmlTitle": "A Roadmap to .<b>NET</b>",
+      "link": "https://www.cs.duke.edu/courses/fall03/cps109/notes/Msft_Netroadmap.ppt",
+      "displayLink": "www.cs.duke.edu",
+      "snippet": ".NET provides XML-based interoperability and is being incorporated across \nMicrosoft's clients, servers, services, and tools. For example, products like \nMicrosoft ...",
+      "htmlSnippet": ".<b>NET</b> provides XML-based interoperability and is being incorporated across <br>\nMicrosoft&#39;s clients, servers, services, and tools. For example, products like <br>\nMicrosoft&nbsp;...",
+      "cacheId": "PMmVJRnvy-kJ",
+      "mime": "application/vnd.ms-powerpoint",
+      "fileFormat": "Microsoft Powerpoint",
+      "formattedUrl": "https://www.cs.duke.edu/courses/fall03/.../Msft_Netroadmap.ppt",
+      "htmlFormattedUrl": "https://www.cs.duke.edu/courses/fall03/.../Msft_<b>Net</b>roadmap.ppt",
+      "pagemap": {
+        "metatags": [
+          {
+            "author": "Ajdan Jumerefendi",
+            "document template": "QUADRANT",
+            "last saved by": "Ajdan Jumerefendi",
+            "revision number": "58",
+            "source": "Microsoft PowerPoint",
+            "edit minutes": "380",
+            "creation date": "9/16/2003 20:33:16",
+            "last saved date": "9/18/2003 17:44:10",
+            "word count": "1711",
+            "presentation format": "On-screen Show",
+            "company": "Duke University",
+            "count bytes": "288599",
+            "count paragraphs": "458",
+            "count slides": "47",
+            "count notes": "0",
+            "count slides hidden": "0",
+            "count mm clips": "0",
+            "scale crop": "no",
+            "links dirty": "no",
+            "_adhocreviewcycleid": "3535766365",
+            "_emailsubject": "Slides",
+            "_authoremail": "ajdan@cs.duke.edu",
+            "_authoremaildisplayname": "Ajdan Jumerefendi"
+          }
+        ]
+      },
+      "labels": [
+        {
+          "name": "lectures",
+          "displayName": "Lectures",
+          "label_with_op": "more:lectures"
+        }
+      ]
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Democrats sneak Net neutrality rules into 'stimulus' bill | Politics and ...",
+      "htmlTitle": "Democrats sneak <b>Net</b> neutrality rules into &#39;stimulus&#39; bill | Politics and ...",
+      "link": "https://www.cs.duke.edu/courses/spring09/cps182s/blogs/net-neutrality-cnetblog.pdf",
+      "displayLink": "www.cs.duke.edu",
+      "snippet": "Jan 15, 2009 ... Democrats sneak Net neutrality rules into 'stimulus' bill. The House Democrats' \n$825 billion legislation released on Thursday was supposedly ...",
+      "htmlSnippet": "Jan 15, 2009 <b>...</b> Democrats sneak <b>Net</b> neutrality rules into &#39;stimulus&#39; bill. The House Democrats&#39; <br>\n$825 billion legislation released on Thursday was supposedly&nbsp;...",
+      "cacheId": "EPvvZnkC9_gJ",
+      "mime": "application/pdf",
+      "fileFormat": "PDF/Adobe Acrobat",
+      "formattedUrl": "https://www.cs.duke.edu/courses/.../net-neutrality-cnetblog.pdf",
+      "htmlFormattedUrl": "https://www.cs.duke.edu/courses/.../<b>net</b>-neutrality-c<b>net</b>blog.pdf",
+      "pagemap": {
+        "metatags": [
+          {
+            "title": "Democrats sneak Net neutrality rules into 'stimulus' bill | Politics and Law - CNET News",
+            "author": "Owen Astrachan",
+            "creator": "firefox-bin",
+            "producer": "Mac OS X 10.5.5 Quartz PDFContext",
+            "creationdate": "D:20090204140939Z00'00",
+            "moddate": "D:20090204140939Z00'00"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "NET VIGILANT: Network Monitor",
+      "htmlTitle": "<b>NET</b> VIGILANT: Network Monitor",
+      "link": "http://www.cse.wustl.edu/~jain/cse571-07/vigilant.htm",
+      "displayLink": "www.cse.wustl.edu",
+      "snippet": "The goal of our project is to write a packet sniffer \"Net Vigilant\", capable of sniffing \nacross wired and wireless interfaces and provide additional packet ...",
+      "htmlSnippet": "The goal of our project is to write a packet sniffer &quot;<b>Net</b> Vigilant&quot;, capable of sniffing <br>\nacross wired and wireless interfaces and provide additional packet&nbsp;...",
+      "cacheId": "_cRbGuYfn8wJ",
+      "formattedUrl": "www.cse.wustl.edu/~jain/cse571-07/vigilant.htm",
+      "htmlFormattedUrl": "www.cse.wustl.edu/~jain/cse571-07/vigilant.htm",
+      "pagemap": {
+        "metatags": [
+          {
+            "author": "Subharthi Paul",
+            "title": "NET VIGILANT: Network Monitor"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "CIS - Course Descriptions",
+      "htmlTitle": "CIS - Course Descriptions",
+      "link": "http://www.cis.upenn.edu/about-academics/courses.php",
+      "displayLink": "www.cis.upenn.edu",
+      "snippet": "C# is the premier programming language for the .NET framework. Over the last \ndecade, the language has evolved to meet the needs of a variety of programming\n ...",
+      "htmlSnippet": "C# is the premier programming language for the .<b>NET</b> framework. Over the last <br>\ndecade, the language has evolved to meet the needs of a variety of programming<br>\n&nbsp;...",
+      "cacheId": "vKaA8ijPLjoJ",
+      "formattedUrl": "www.cis.upenn.edu/about-academics/courses.php",
+      "htmlFormattedUrl": "www.cis.upenn.edu/about-academics/courses.php",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "width": "160",
+            "height": "64",
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6ceQWH1Pl_Enq6xTMV3cKlMmD5Z064lZq23cXGjzxjMDLXcLzmU5WOA"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "http://www.cis.upenn.edu/images/template/top_nav_eng_bnr.gif"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "An Intellectual Property Threat Analysis of a .NET Windows Application",
+      "htmlTitle": "An Intellectual Property Threat Analysis of a .<b>NET</b> Windows Application",
+      "link": "https://www.cs.auckland.ac.nz/courses/compsci725s2c/archive/termpapers/pm.pdf",
+      "displayLink": "www.cs.auckland.ac.nz",
+      "snippet": "NET Windows Application for marking student assignments and continue to \ndiscuss a form of tamper-proofing to make attacks of this type more difficult. 2.",
+      "htmlSnippet": "<b>NET</b> Windows Application for marking student assignments and continue to <br>\ndiscuss a form of tamper-proofing to make attacks of this type more difficult. 2.",
+      "cacheId": "X8ufoqTZbkEJ",
+      "mime": "application/pdf",
+      "fileFormat": "PDF/Adobe Acrobat",
+      "formattedUrl": "https://www.cs.auckland.ac.nz/courses/compsci725s2c/.../pm.pdf",
+      "htmlFormattedUrl": "https://www.cs.auckland.ac.nz/courses/compsci725s2c/.../pm.pdf",
+      "pagemap": {
+        "metatags": [
+          {
+            "producer": "GNU Ghostscript 7.05",
+            "title": "Microsoft Word - IP Threat Analysis.doc",
+            "creator": "PScript5.dll Version 5.2",
+            "creationdate": "10/25/2004 14:40:33",
+            "author": "Paul"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Graphical Models",
+      "htmlTitle": "Graphical Models",
+      "link": "http://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html",
+      "displayLink": "www.cs.ubc.ca",
+      "snippet": "In general, the conditional independence relationships encoded by a Bayes Net \nare best be explained by means of the \"Bayes Ball\" algorithm (due to Ross ...",
+      "htmlSnippet": "In general, the conditional independence relationships encoded by a Bayes <b>Net</b> <br>\nare best be explained by means of the &quot;Bayes Ball&quot; algorithm (due to Ross&nbsp;...",
+      "cacheId": "kQwgjTag6esJ",
+      "formattedUrl": "www.cs.ubc.ca/~murphyk/Bayes/bnintro.html",
+      "htmlFormattedUrl": "www.cs.ubc.ca/~murphyk/Bayes/bnintro.html",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "width": "246",
+            "height": "205",
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQA1vEY1KbfEQNRPFWzoUf9ttky47cRV3ygUZgTEkklJ2CfK33t-MSUd_Yy"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "http://www.cs.ubc.ca/~murphyk/Bayes/Figures/sprinkler.gif"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "ASP.NET",
+      "htmlTitle": "ASP.<b>NET</b>",
+      "link": "https://courses.cs.vt.edu/~cs6704/UsingDotNet.ppt",
+      "displayLink": "courses.cs.vt.edu",
+      "snippet": "Cross-Language Demo. Demonstrates mixing C# and VB.NET code. C# Class. \nCSDemoClass.cs. VB.NET Class. VBDemoClass.vb. “Main” class (C#). Demo.cs.",
+      "htmlSnippet": "Cross-Language Demo. Demonstrates mixing C# and VB.<b>NET</b> code. C# Class. <br>\nCSDemoClass.cs. VB.<b>NET</b> Class. VBDemoClass.vb. “Main” class (C#). Demo.cs.",
+      "cacheId": "DtN_gePmkkYJ",
+      "mime": "application/vnd.ms-powerpoint",
+      "fileFormat": "Microsoft Powerpoint",
+      "formattedUrl": "https://courses.cs.vt.edu/~cs6704/UsingDotNet.ppt",
+      "htmlFormattedUrl": "https://courses.cs.vt.edu/~cs6704/UsingDot<b>Net</b>.ppt",
+      "pagemap": {
+        "metatags": [
+          {
+            "author": "Jiunwei Chen",
+            "document template": "Network",
+            "last saved by": "Jiunwei Chen",
+            "revision number": "49",
+            "source": "Microsoft PowerPoint",
+            "edit minutes": "144",
+            "creation date": "1/30/2002 00:57:43",
+            "last saved date": "2/5/2002 02:27:14",
+            "word count": "409",
+            "presentation format": "On-screen Show",
+            "company": "Microsoft",
+            "count bytes": "201459",
+            "count paragraphs": "156",
+            "count slides": "19",
+            "count notes": "0",
+            "count slides hidden": "0",
+            "count mm clips": "0",
+            "scale crop": "no",
+            "links dirty": "no"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Syllabus",
+      "htmlTitle": "Syllabus",
+      "link": "http://www.cs.iastate.edu/~smkautz/cs430s13/syllabus.html",
+      "displayLink": "www.cs.iastate.edu",
+      "snippet": "See www.jcip.net. Note that this book is not in the bookstore, please order a copy \nonline from your favorite vendor. Other references will be suggested from time ...",
+      "htmlSnippet": "See www.jcip.<b>net</b>. Note that this book is not in the bookstore, please order a copy <br>\nonline from your favorite vendor. Other references will be suggested from time&nbsp;...",
+      "cacheId": "wNC4la8ybN8J",
+      "formattedUrl": "www.cs.iastate.edu/~smkautz/cs430s13/syllabus.html",
+      "htmlFormattedUrl": "www.cs.iastate.edu/~smkautz/cs430s13/syllabus.html"
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Elementary net systems",
+      "htmlTitle": "Elementary <b>net</b> systems",
+      "link": "https://www.cse.iitb.ac.in/~akshayss/courses/cs735/rozenberg-engelfriet-ens.pdf",
+      "displayLink": "www.cse.iitb.ac.in",
+      "snippet": "Elementary Net Systems. Grzegorz Rozenberg and Joost Engelfriet. Department \nof Computer Science, Leiden University. P.O.Box 9512, 2300 RA Leiden, The ...",
+      "htmlSnippet": "Elementary <b>Net</b> Systems. Grzegorz Rozenberg and Joost Engelfriet. Department <br>\nof Computer Science, Leiden University. P.O.Box 9512, 2300 RA Leiden, The&nbsp;...",
+      "cacheId": "TvdmpzkwkhsJ",
+      "mime": "application/pdf",
+      "fileFormat": "PDF/Adobe Acrobat",
+      "formattedUrl": "https://www.cse.iitb.ac.in/~akshayss/.../rozenberg-engelfriet-ens.pdf",
+      "htmlFormattedUrl": "https://www.cse.iitb.ac.in/~akshayss/.../rozenberg-engelfriet-ens.pdf",
+      "pagemap": {
+        "metatags": [
+          {
+            "creator": "12_1.tif",
+            "creationdate": "Fri Jun 03 08:58:14 2005",
+            "author": "Administrator",
+            "producer": "PageGenie PDFGenerator",
+            "title": "Elementary net systems",
+            "moddate": "D:20050608234602"
+          }
+        ]
+      }
+    }
+  ]
+}

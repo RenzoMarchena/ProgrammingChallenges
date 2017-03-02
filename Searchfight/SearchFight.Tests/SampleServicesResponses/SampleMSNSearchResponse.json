@@ -1,0 +1,351 @@
+﻿{
+  "_type": "SearchResponse",
+  "webPages": {
+    "webSearchUrl": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=FxYcFnpPmvnir4IEmNn30vpBEHMYZsHVs4n3_xkSTTA&v=1&r=https%3a%2f%2fwww.bing.com%2fsearch%3fq%3djava&p=DevEx,5444.1",
+    "totalEstimatedMatches": 13300000,
+    "value": [
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.0",
+        "name": "java.com: Java + You",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=e7qo-xH744ferjlrFtkZwRdT8pB5yKS90qESKpImwck&v=1&r=https%3a%2f%2fwww.java.com%2fen%2f&p=DevEx,5083.1",
+        "displayUrl": "https://www.java.com/en",
+        "snippet": "IMPORTANT INFORMATION REGARDING THE SECURITY OF JAVA SE. Java.com. Download Help . Java+You, Download Today! Free Java Download",
+        "deepLinks": [
+          {
+            "name": "Download",
+            "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=yNevxAo3i4qSGZcr9qP0LP9IHQ6nBBTbPVt_Srl50w0&v=1&r=http%3a%2f%2fwww.java.com%2fen%2fdownload%2fie_manual.jsp%3flocale%3den&p=DevEx,5073.1",
+            "snippet": "This page is your source to download or update your existing Java Runtime Environment, also known as the Java Virtual Machine."
+          },
+          {
+            "name": "Verify Java Version",
+            "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=jUaPubfueO4xT_iPSbuvSAU4-gGqHHDpIXCNOsQTwO0&v=1&r=https%3a%2f%2fwww.java.com%2fen%2fdownload%2finstalled.jsp&p=DevEx,5074.1",
+            "snippet": "This site won’t let us show the description for this page."
+          },
+          {
+            "name": "Java Update",
+            "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=sgYNZv3SZPFYx0XAk9j7OiWg_EfVrNjKHg5Zs_MNYf8&v=1&r=https%3a%2f%2fjava.com%2fen%2fdownload%2fhelp%2fjava_update.xml&p=DevEx,5075.1",
+            "snippet": "What is Java Auto Update? How does automatic update work? Java Update is a feature that keeps your Windows computer up-to-date with the latest Java releases."
+          },
+          {
+            "name": "Help",
+            "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=95kRR7FW9WKwp5SI6RPHWFsRmdiV_gnBw56-loKhOMY&v=1&r=https%3a%2f%2fjava.com%2fen%2fdownload%2fhelp%2f&p=DevEx,5076.1",
+            "snippet": "Java Help Center. Welcome to the Java.com Help Center where we describe solutions for issues you might encounter when downloading and using Java on your computer. We ..."
+          },
+          {
+            "name": "What is Java",
+            "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=2mzyI8RQcpL_aqIOdFTcgzeldQE49SVZtyul9JJHA2s&v=1&r=https%3a%2f%2fwww.java.com%2fen%2fdownload%2fwhatis_java.jsp&p=DevEx,5077.1",
+            "snippet": "What is Java? Java allows you to play online games, chat with people around the world, calculate your mortgage interest, and view images in 3D, just to name a few."
+          },
+          {
+            "name": "About Java",
+            "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=W2FkN93fu6K190Ui98saoahuInvSNGOHthB9VqIxfsY&v=1&r=http%3a%2f%2fwww.java.com%2fen%2fabout%2f&p=DevEx,5078.1",
+            "snippet": "Learn About Java Technology. Java is the foundation for virtually every type of networked application and ..."
+          }
+        ],
+        "dateLastCrawled": "2017-02-25T10:06:00"
+      },
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.1",
+        "name": "Download Free Java Software",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=5pMzqtpAd8Fc1BvZ8cQ1s_q3TqikkS2rIaJ0ROXY434&v=1&r=https%3a%2f%2fjava.com%2fen%2fdownload%2f&p=DevEx,5096.1",
+        "displayUrl": "https://java.com/en/download",
+        "snippet": "Why download Java? Java technology allows you to work and play in a secure computing environment. Upgrading to the latest Java version improves the security of your ...",
+        "dateLastCrawled": "2017-02-17T01:40:00"
+      },
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.2",
+        "name": "Java Software | Oracle®",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=jVf7ClKPlwuk6dxcJ3y5KwxTWLYIGSfnuMikmgGM9wI&v=1&r=https%3a%2f%2fwww.oracle.com%2fjava%2findex.html&p=DevEx,5108.1",
+        "displayUrl": "https://www.oracle.com/java",
+        "snippet": "Java is the world’s #1 programming language. Java can reduce costs, drive innovation, and improve application services as the programming language of choice for IoT ...",
+        "dateLastCrawled": "2017-02-27T14:05:00"
+      },
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.3",
+        "name": "Java (programming language) - Wikipedia",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=HN_bcS6temnlwq5sTUPV9FWT_07VgtdjJSKdIHPAfEw&v=1&r=https%3a%2f%2fen.wikipedia.org%2fwiki%2fJava_%2528programming_language%2529&p=DevEx,5128.1",
+        "about": [
+          {
+            "name": "Java"
+          },
+          {
+            "name": "Flow Java"
+          }
+        ],
+        "displayUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+        "snippet": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few ...",
+        "dateLastCrawled": "2017-02-24T02:39:00"
+      },
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.4",
+        "name": "Java - Wikipedia",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=HNAUWplF6H6FO8wj7dvO8TsW9M490RtQN1zXrr5TAEo&v=1&r=https%3a%2f%2fen.wikipedia.org%2fwiki%2fJava&p=DevEx,5148.1",
+        "about": [
+          {
+            "name": "Java"
+          }
+        ],
+        "displayUrl": "https://en.wikipedia.org/wiki/Java",
+        "snippet": "Java (Indonesian: Jawa; Javanese: ꦗꦮ; Sundanese: ᮏᮝ) is an island of Indonesia. With a population of over 141 million (the island itself) or 145 ...",
+        "dateLastCrawled": "2017-02-27T20:34:00"
+      },
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.5",
+        "name": "Java Software for Windows - Free downloads and reviews ...",
+        "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=9ywj0uYOrEdsTOpqUu18y9x82oi-dPlpZLoQ32kRERk&v=1&r=http%3a%2f%2fdownload.cnet.com%2fs%2fdevelopers-java%2fwindows%2f&p=DevEx,5161.1",
+        "displayUrl": "download.cnet.com/s/developers-java/windows",
+        "snippet": "The Best Free Java Software app downloads for Windows: DJ Java Decompiler JavaExe Java Launcher Java SE Development Kit Java 2 Platform, Standard Edit",
+        "dateLastCrawled": "2017-02-21T09:58:00"
+      },
+      {
+        "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.6",
+        "name": "TutorialsPoint Java Tutorial - Tutorials for Kanban ...",
+        "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=hiQarsyKs1XobYaN1oYfiYnXb0oj9uobUaTFwUEuzy4&v=1&r=http%3a%2f%2fwww.tutorialspoint.com%2fjava%2f&p=DevEx,5174.1",
+        "displayUrl": "www.tutorialspoint.com/java",
+        "snippet": "Java Tutorial for Beginners - Learn Java in simple and easy steps starting from basic to advanced concepts with examples including Java Syntax Object Oriented ...",
+        "dateLastCrawled": "2017-02-24T13:32:00"
+      }
+    ]
+  },
+  "news": {
+    "id": "https://api.cognitive.microsoft.com/api/v5/#News",
+    "readLink": "https://api.cognitive.microsoft.com/api/v5/news/search?q=Java",
+    "value": [
+      {
+        "name": "Gradle upgrade builds Java apps faster for Android",
+        "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=_3uzfQZo9nREzoCJm6ZKBnuhWnAi48vR6JAZuNoy7QY&v=1&r=http%3a%2f%2fwww.infoworld.com%2farticle%2f3175806%2fjava%2fgradle-upgrade-builds-java-apps-faster-for-android.html&p=DevEx,5276.1",
+        "image": {
+          "contentUrl": "http://images.techhive.com/images/article/2017/02/1280px-java_ring-100711157-large.jpeg",
+          "thumbnail": {
+            "contentUrl": "https://www.bing.com/th?id=ON.4F32CB655170D0A4147C7DB0226435CA&pid=News",
+            "width": 700,
+            "height": 525
+          }
+        },
+        "description": "Gradle, the build system of choice for Android mobile development, has been upgraded with better support for building Java applications. Gradle 3.4 offers fast incremental results and \"the end of dreaded compile classpath leakage,\" said Cedric Champeau, a ...",
+        "about": [
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/8df814a3-19ce-e658-49c2-0b09b61a9c10",
+            "name": "Java"
+          },
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/98428fb5-66d6-ba46-c292-46f5a176a9eb",
+            "name": "InfoWorld"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Infoworld"
+          }
+        ],
+        "datePublished": "2017-03-01T11:12:00",
+        "category": "ScienceAndTechnology"
+      },
+      {
+        "name": "50 Google Engineers Volunteered to Patch Thousands of Java Open Source Projects",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=C6I3StACtHu1GEh2-Es8_vEY0OIc8E228-8ijXWp5Ig&v=1&r=https%3a%2f%2fwww.bleepingcomputer.com%2fnews%2fsecurity%2f50-google-engineers-volunteered-to-patch-thousands-of-java-open-source-projects%2f&p=DevEx,5280.1",
+        "image": {
+          "contentUrl": "https://www.bleepstatic.com/images/stock-photos/companies/Google/google-door-sign.jpg",
+          "thumbnail": {
+            "contentUrl": "https://www.bing.com/th?id=ON.38C0368AE09D69F05F1181CCA09D4D75&pid=News",
+            "width": 700,
+            "height": 284
+          }
+        },
+        "description": "A year ago, several Google engineers got together and lay the foundation of Operation Rosehub, a project during which Google employees used some of their official work time to patch thousands of open source projects against a severe and widespread Java ...",
+        "about": [
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/8df814a3-19ce-e658-49c2-0b09b61a9c10",
+            "name": "Java"
+          },
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/f39b29ec-05ee-d6cb-3070-ddaa0fb00ee0",
+            "name": "Google"
+          },
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/2a58d966-4d9d-8d3e-18c7-8462f0008951",
+            "name": "Open source"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "bleepingcomputer.com"
+          }
+        ],
+        "datePublished": "2017-03-02T13:28:00",
+        "category": "ScienceAndTechnology"
+      },
+      {
+        "name": "IntelliJ IDEA 2017.1 Public Preview: Java 9, Debugger, VCS, Search, Editor and Many More",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=C5a-PQ1pxN2zp6RgjjCTpc04RGITSZlYaRwgmKWhSLk&v=1&r=https%3a%2f%2fdzone.com%2farticles%2fintellij-idea-20171-public-preview-java-9-debugger&p=DevEx,5282.1",
+        "image": {
+          "contentUrl": "https://dz2cdn1.dzone.com/storage/article-thumb/4488500-thumb.jpg",
+          "thumbnail": {
+            "contentUrl": "https://www.bing.com/th?id=ON.954EA14799EEF667A746C930B38BF64B&pid=News",
+            "width": 700,
+            "height": 437
+          }
+        },
+        "description": "Navigate the Maze of the End-User Experience and pick up this APM Essential guide, brought to you in partnership with CA Technologies. It’s been three months since we released v2016.3. Roughly half of this time we spent working on bug-fixes; some fixes ...",
+        "about": [
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/8df814a3-19ce-e658-49c2-0b09b61a9c10",
+            "name": "Java"
+          },
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/248e2aca-a95d-1aa3-78bf-7da7c3fb653b",
+            "name": "Preview"
+          },
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/27f1e9a6-a453-7552-b0db-38113e273e47",
+            "name": "Debugger"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "dzone.com"
+          }
+        ],
+        "datePublished": "2017-03-02T12:04:00",
+        "category": "ScienceAndTechnology"
+      },
+      {
+        "name": "Java Jazz Festival to swing into town",
+        "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=OtJb6DBjRWhCX2q4QrrnZSvjSDx55n20GuXpqR2mnLA&v=1&r=http%3a%2f%2fwww.thejakartapost.com%2flife%2f2017%2f03%2f02%2fjava-jazz-festival-to-swing-into-town.html&p=DevEx,5445.1",
+        "image": {
+          "contentUrl": "http://img.jakpost.net/c/2016/05/20/2016_05_20_4913_1463727075._small.jpg",
+          "thumbnail": {
+            "contentUrl": "https://www.bing.com/th?id=ON.3AC8C50E38B9ABFE02E238933D6F2DA8&pid=News",
+            "width": 363,
+            "height": 241
+          }
+        },
+        "description": "Tokyo Ska Paradise performs during 2016 Java Jazz Festival in JIexpo, Jakarta, Friday, March 4, 2016 (The Jakarta Post/Seto Wardhana) The Jakarta International Java Jazz Festival will kick off on Friday with the promise of more surprise collaborative ...",
+        "about": [
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/2705c6c6-9691-5a99-733c-ccc631e12205",
+            "name": "Swing"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "The Jakarta Post"
+          }
+        ],
+        "datePublished": "2017-03-02T09:54:00",
+        "category": "Entertainment",
+        "clusteredArticles": [
+          {
+            "name": "Java Jazz Festival to Feature 360-Degree Live Streaming",
+            "url": "http://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=fvzUCtTGdYm3AnELdGF8I2mD_nO61Fie3T9ra3TCM7I&v=1&r=http%3a%2f%2fjakartaglobe.id%2fmusic%2fjava-jazz-festival-feature-360-degree-live-streaming%2f&p=DevEx,5446.1",
+            "description": "Jakarta. Live streaming from the annual Java Jazz Festival, which will hit JIExpo Kemayoran in North Jakarta this weekend, is nothing new, but being able to view it from an angle of 360 degrees certainly is. \"YouTube streaming has been here since 2012.",
+            "provider": [
+              {
+                "_type": "Organization",
+                "name": "The Jakarta Globe"
+              }
+            ],
+            "datePublished": "2017-03-02T11:18:00",
+            "category": "Entertainment"
+          }
+        ]
+      },
+      {
+        "name": "Understanding Java’s Reflection API in Five Minutes",
+        "url": "https://www.bing.com/cr?IG=16F9E7CAEF884751988226089C2FBBE5&CID=0F295FC616D76F4C14CC55FF17E66E37&rd=1&h=89eZMMfkQKt6UNdEze7LmU1-g8ZT1qwfguYjH7n8zSE&v=1&r=https%3a%2f%2fwww.sitepoint.com%2fjava-reflection-api-tutorial%2f&p=DevEx,5286.1",
+        "image": {
+          "contentUrl": "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/02/1488222239eagle-reflection.jpg",
+          "thumbnail": {
+            "contentUrl": "https://www.bing.com/th?id=ON.F80F4D0142F66D1B928C5473386E6454&pid=News",
+            "width": 700,
+            "height": 371
+          }
+        },
+        "description": "A language that is capable of reflection, like Java is, allows developers to inspect types, methods, fields, annotations, etc. at run time and to defer the decision on how to use them from compile time to run time. To that end, Java’s reflection API ...",
+        "about": [
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/8df814a3-19ce-e658-49c2-0b09b61a9c10",
+            "name": "Java"
+          },
+          {
+            "readLink": "https://api.cognitive.microsoft.com/api/v5/entities/8dca1cd0-cdc3-c084-0111-a5447d6f1926",
+            "name": "Reflection"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Site Point"
+          }
+        ],
+        "datePublished": "2017-03-01T21:48:00",
+        "category": "ScienceAndTechnology"
+      }
+    ]
+  },
+  "rankingResponse": {
+    "mainline": {
+      "items": [
+        {
+          "answerType": "WebPages",
+          "resultIndex": 0,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.0"
+          }
+        },
+        {
+          "answerType": "News",
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#News"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 1,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.1"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 2,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.2"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 3,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.3"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 4,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.4"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 5,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.5"
+          }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 6,
+          "value": {
+            "id": "https://api.cognitive.microsoft.com/api/v5/#WebPages.6"
+          }
+        }
+      ]
+    }
+  }
+}

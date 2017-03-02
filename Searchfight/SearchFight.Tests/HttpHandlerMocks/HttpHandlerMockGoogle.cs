@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Net.Http;
-using System.Net.Http.Headers;
+using System.Net.Http.Formatting;
 using System.Threading.Tasks;
 using SearchFight.Interfaces;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-namespace SearchFight.Tests
+namespace SearchFight.Tests.HttpHandlerMocks
 {
-    public class HttpHandlerMock : IHttpHandler
+    public class HttpHandlerMockGoogle : IHttpHandler
     {
         public void AddRequestHeader(string name, string value)
         {
@@ -23,8 +23,16 @@ namespace SearchFight.Tests
 
         public Task<HttpResponseMessage> GetAsync(string url)
         {
-            return null;
-            //return client.GetAsync(url);
+            return Task.Run(() =>
+            {
+                var response = new HttpResponseMessage();
+                string responseStr = File.ReadAllText("..\\..\\SampleServicesResponses\\SampleGoogleResponse.json");
+                JObject serializedstr = (JObject)JsonConvert.DeserializeObject(responseStr);
+                response.Content = new ObjectContent(typeof(JObject), serializedstr, new JsonMediaTypeFormatter());
+                return response;
+            });
+            
+
         }
 
         public Task<HttpResponseMessage> GetAsync(string url, HttpContent content)
@@ -36,5 +44,6 @@ namespace SearchFight.Tests
         {
             throw new NotImplementedException();
         }
+
     }
 }
