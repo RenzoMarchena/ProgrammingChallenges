@@ -6,31 +6,30 @@ using Newtonsoft.Json.Linq;
 using SearchFight.Interfaces;
 using SearchFight.Exceptions;
 
-namespace SearchFight.SearchEngines
+namespace SearchFight.Implementations
 {
     public abstract class SearchEngine:ISearchEngine
     {
-        public SearchResult Search(string stringToSearch)
+        private readonly IHttpHandler httpHandler;
+        public SearchEngine(IHttpHandler httpHandler)
         {
-            var client = new HttpClient();
-
-            client.BaseAddress = new Uri(GetUri());
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            AddApiKey(client);
+            if (httpHandler == null) throw new ArgumentNullException("httpHandler");
+            this.httpHandler = httpHandler;
+        }
+        public ISearchResult Search(string stringToSearch)
+        {
+            AddApiKey(httpHandler);
 
             HttpResponseMessage response;
 
             try
             {
-                response = client.GetAsync(AddParammeters(client.BaseAddress.AbsolutePath, stringToSearch)).Result;
+                response = httpHandler.GetAsync(AddParammeters(GetUri(), stringToSearch)).Result;
             }
-            catch (AggregateException ex)
+            catch (Exception ex)
             {
                 throw new NoInternetConnectionException();
             }
-
 
             long totalResults = 0;
 
@@ -45,10 +44,9 @@ namespace SearchFight.SearchEngines
             }
             else
             {
-                //handle TimeOut here
                 throw new TimeOutException(); 
-
             }
+
             var searchResult = new SearchResult();
 
             searchResult.SearchEngineUsed = ToString();
@@ -60,7 +58,7 @@ namespace SearchFight.SearchEngines
 
         protected abstract string AddParammeters(string absolutePath, string stringToSearch);
 
-        protected abstract void AddApiKey(HttpClient client);
+        protected abstract void AddApiKey(IHttpHandler httpHandler);
 
         protected abstract long GetTotalResults(dynamic jObj);
 

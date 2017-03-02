@@ -1,12 +1,17 @@
 ﻿using System.Net.Http;
+using SearchFight.Interfaces;
 
-namespace SearchFight.SearchEngines
+namespace SearchFight.Implementations.SearchEngines
 {
     public class MSNSearch : SearchEngine
     {
-        private readonly string apiKey = "1f3497a23ded414e9590844d2313fa72";
-        private readonly string uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
+        private const string apiKey = "1f3497a23ded414e9590844d2313fa72";
+        private const string uri = "https://api.cognitive.microsoft.com/bing/v5.0/search";
 
+        public MSNSearch(IHttpHandler httpHandler) : base(httpHandler)
+        {
+
+        }
         protected override string GetUri()
         {
             return uri;
@@ -16,9 +21,9 @@ namespace SearchFight.SearchEngines
             return absolutePath + "?q=" + stringToSearch;
         }
 
-        protected override void AddApiKey(HttpClient client)
+        protected override void AddApiKey(IHttpHandler httpHandler)
         {
-           client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
+           httpHandler.AddRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
         }
 
         protected override long GetTotalResults(dynamic jObj)

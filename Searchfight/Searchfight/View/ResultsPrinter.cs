@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SearchFight.ViewModel;
 
 namespace SearchFight.View
 {
     public class ResultsPrinter
     {
-        public static void Print(IEnumerable<Model.SearchResult> searchResults)
+        public static void Print(IEnumerable<SearchResult> searchResults)
         {
 
             var resultsByProgrammingLanguage = GetResultsByProgrammingLanguage(searchResults);
@@ -26,12 +27,12 @@ namespace SearchFight.View
         }
 
 
-        public static IEnumerable<string> GetResultsByProgrammingLanguage(IEnumerable<Model.SearchResult> searchResults)
+        public static IEnumerable<string> GetResultsByProgrammingLanguage(IEnumerable<SearchResult> searchResults)
         {
             var results = new List<string>();
 
             //Group SearchResults by Programming Language
-            var searchResultsByProgrammingLanguage = searchResults.GroupBy(searchResult => searchResult.Query);
+            var searchResultsByProgrammingLanguage = searchResults.GroupBy(searchResult => searchResult.ProgrammingLanguage);
 
             //For each Group construct a line including the number of results in each Search Engine
             foreach (var group in searchResultsByProgrammingLanguage)
@@ -50,7 +51,7 @@ namespace SearchFight.View
         }
 
 
-        public static IEnumerable<string> GetWinnerBySearchEngine(IEnumerable<Model.SearchResult> searchResults)
+        public static IEnumerable<string> GetWinnerBySearchEngine(IEnumerable<SearchResult> searchResults)
         {
             var results = new List<string>();
 
@@ -62,7 +63,7 @@ namespace SearchFight.View
             {
                 var winner = group.OrderByDescending(searchResult => searchResult.NumberOfResults).First();
 
-                results.Add(group.Key + " winner: " + winner.Query);
+                results.Add(group.Key + " winner: " + winner.ProgrammingLanguage);
             }
 
             return results;

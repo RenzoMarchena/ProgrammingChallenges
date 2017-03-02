@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using SearchFight.Interfaces;
+using SearchFight.ViewModel;
 using SearchFight.View;
 using System;
 
@@ -7,12 +8,7 @@ namespace SearchFight.Controller
 {
     public class SearchFightController
     {
-        private IQueryMaker queryMaker; 
-
-        public SearchFightController()
-        {
-            this.queryMaker = SearchFight.container.GetInstance<IQueryMaker>();
-        }
+        private readonly IQueryMaker queryMaker; 
 
         public SearchFightController(IQueryMaker queryMaker)
         {
@@ -22,24 +18,23 @@ namespace SearchFight.Controller
 
         public void StartSearchFight(string[] programmingLanguages)
         {
-
             var searchResults = queryMaker.QuerySearchEngines(programmingLanguages);
            
-            //Contruct the Model
-            var model = new List<Model.SearchResult>();
+            //Contruct the ViewModel
+            var viewModel = new List<SearchResult>();
 
             foreach (var searchResult in searchResults)
             {
-                model.Add(new Model.SearchResult()
+                viewModel.Add(new SearchResult()
                 {
                     SearchEngineUsed = searchResult.SearchEngineUsed,
-                    Query = searchResult.Query,
+                    ProgrammingLanguage = searchResult.Query,
                     NumberOfResults = searchResult.NumberOfResults
                 });
 
             }
 
-            ResultsPrinter.Print(model);
+            ResultsPrinter.Print(viewModel);
 
         }
     }

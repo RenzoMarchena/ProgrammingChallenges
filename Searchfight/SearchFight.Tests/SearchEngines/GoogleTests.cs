@@ -1,9 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SearchFight.SearchEngines;
 using System;
 
 namespace SearchFight.Tests
-{
+{/*
     [TestClass()]
     public class GoogleTests
     {
@@ -34,5 +33,5 @@ namespace SearchFight.Tests
 
             }
         }
-    }
+    }*/
 }

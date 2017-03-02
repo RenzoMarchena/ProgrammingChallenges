@@ -4,7 +4,7 @@ namespace SearchFight.Interfaces
 {
     public interface IQueryMaker
     {
-        IEnumerable<SearchResult> QuerySearchEngines(IEnumerable<string> queries);
+        IEnumerable<ISearchResult> QuerySearchEngines(IEnumerable<string> queries);
          
     }
 }

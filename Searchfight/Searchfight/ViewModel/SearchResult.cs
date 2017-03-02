@@ -1,11 +1,11 @@
 ﻿
-namespace SearchFight.Model
+namespace SearchFight.ViewModel
 {
     public class SearchResult
     {
         public string SearchEngineUsed { get; set; }
 
-        public string Query { get; set; }
+        public string ProgrammingLanguage { get; set; }
 
         public long NumberOfResults { get; set; }
     }

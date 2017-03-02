@@ -1,31 +1,31 @@
 ﻿using System;
+using SearchFight.Dependencies;
 using SearchFight.Interfaces;
 using SearchFight.Controller;
-using SimpleInjector;
 
 namespace SearchFight
 {
     class SearchFight
     {
-        public static Container container;
-
         static void Main(string[] programmingLanguages)
         {
-            container = new Container();
+            //Resolve Dependencies
+            var container = SearchFightContainer.BuildContainer();
 
-            container.Register<IQueryMaker, QueryMaker>(Lifestyle.Singleton);
-
-            container.Verify();
-
+            var queryMaker = container.GetInstance<IQueryMaker>();
+            
+            //Call Controller
             try
             {
-                var searchFightCon = new SearchFightController();
+                var searchFightCon = new SearchFightController(queryMaker);
                 searchFightCon.StartSearchFight(programmingLanguages);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
         }
+
     }
 }

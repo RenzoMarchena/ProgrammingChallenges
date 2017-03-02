@@ -3,7 +3,7 @@ namespace SearchFight.Interfaces
 {
     public interface ISearchEngine
     {
-       SearchResult Search(string stringToSearch); 
+       ISearchResult Search(string stringToSearch); 
 
     }
 }

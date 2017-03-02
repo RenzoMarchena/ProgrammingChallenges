@@ -1,9 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SearchFight.SearchEngines;
 using System;
 
 namespace SearchFight.Tests
-{
+{/*
     [TestClass()]
     public class MSNSearchTests
     {
@@ -31,5 +30,5 @@ namespace SearchFight.Tests
             catch (Exception ex)
             { }
         }
-    }
+    }*/
 }
