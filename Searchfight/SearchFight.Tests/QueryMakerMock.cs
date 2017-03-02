@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using SearchFight.Interfaces;
-using SearchFight.Implementations;
-
 
 namespace SearchFight.Tests
 {

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Net.Http;
-using System.Net.Http.Formatting;
 using System.Threading.Tasks;
 using SearchFight.Interfaces;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace SearchFight.Tests.HttpHandlerMocks
 {
