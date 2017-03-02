@@ -59,10 +59,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SearchFight.DependenciesContainer\SearchFight.Dependencies.csproj">
-      <Project>{0008229b-57e1-45b5-80e0-4542e1046fbd}</Project>
-      <Name>SearchFight.Dependencies</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SearchFight.Interfaces\SearchFight.Interfaces.csproj">
       <Project>{03fe0556-4bf4-478f-ba36-fbc0a099346e}</Project>
       <Name>SearchFight.Interfaces</Name>
