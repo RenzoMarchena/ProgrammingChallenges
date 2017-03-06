@@ -26,6 +26,21 @@ namespace SearchFight.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(SearchEngineResponseException))]
+        public void CannotReturnSearchResultsFromMSNSearchWhenResponseFailed()
+        {
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockFailedResponse();
+            var msnSearch = new MSNSearch(fakeHttpHandler);
+
+            //Act
+            var searchResult = msnSearch.Search(".net");
+
+            //Assert
+
+        }
+
+        [TestMethod()]
         [ExpectedException(typeof(TimeOutException))]
         public void CannotSearchMSNSearchWhenTimeOut()
         {
@@ -38,7 +53,22 @@ namespace SearchFight.Tests
 
             //Assert
 
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ConnectionException))]
+        public void CannotSearchMSNSearchWhenNoConnection()
+        {
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockConnectionProblem();
+            var msnSearch = new MSNSearch(fakeHttpHandler);
+
+            //Act
+            var searchResult = msnSearch.Search("java");
+
+            //Assert
 
         }
+
     }
 }

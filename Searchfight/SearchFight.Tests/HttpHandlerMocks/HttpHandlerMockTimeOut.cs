@@ -6,7 +6,7 @@ using SearchFight.Interfaces;
 namespace SearchFight.Tests.HttpHandlerMocks
 {
     public class HttpHandlerMockTimeOut:IHttpHandler
-    {
+    {           
         public void AddRequestHeader(string name, string value)
         {
 
@@ -21,12 +21,10 @@ namespace SearchFight.Tests.HttpHandlerMocks
         {
             return Task.Run(() =>
             {
-                var response = new HttpResponseMessage();
-                response.StatusCode = System.Net.HttpStatusCode.BadRequest;
-                return response;
+                throw new TimeoutException();
+                return new HttpResponseMessage();
             });
-
-
+            
         }
 
         public Task<HttpResponseMessage> GetAsync(string url, HttpContent content)

@@ -76,6 +76,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Controller\SearchFightControllerTests.cs" />
+    <Compile Include="HttpHandlerMocks\HttpHandlerMockConnectionProblem.cs" />
+    <Compile Include="HttpHandlerMocks\HttpHandlerMockFailedResponse.cs" />
     <Compile Include="HttpHandlerMocks\HttpHandlerMockGoogle.cs" />
     <Compile Include="HttpHandlerMocks\HttpHandlerMockMSNSearch.cs" />
     <Compile Include="HttpHandlerMocks\HttpHandlerMockTimeOut.cs" />

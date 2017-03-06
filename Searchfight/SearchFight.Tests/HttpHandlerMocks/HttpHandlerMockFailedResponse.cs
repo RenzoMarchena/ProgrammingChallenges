@@ -1,33 +1,30 @@
 ﻿using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using SearchFight.Interfaces;
 
-namespace SearchFight.Implementations
+namespace SearchFight.Tests.HttpHandlerMocks
 {
-    public class HttpHandler : IHttpHandler
+    public class HttpHandlerMockFailedResponse : IHttpHandler
     {
-        private HttpClient client;
-
-        public HttpHandler()
+        public void AddRequestHeader(string name, string value)
         {
-            client = new HttpClient();
-            client.Timeout = TimeSpan.FromSeconds(10);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
+            
         }
 
         public HttpResponseMessage Get(string url)
         {
-            
             throw new NotImplementedException();
         }
 
         public Task<HttpResponseMessage> GetAsync(string url)
         {
-            return client.GetAsync(url);
+            return Task.Run(() =>
+            {
+                var response = new HttpResponseMessage();
+                response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                return response;
+            });
         }
 
         public Task<HttpResponseMessage> GetAsync(string url, HttpContent content)
@@ -38,11 +35,6 @@ namespace SearchFight.Implementations
         public HttpResponseMessage Post(string url, HttpContent content)
         {
             throw new NotImplementedException();
-        }
-
-        public void AddRequestHeader(string name,string value)
-        {
-            client.DefaultRequestHeaders.Add(name, value);
         }
     }
 }

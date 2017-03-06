@@ -20,26 +20,36 @@ namespace SearchFight.Implementations
         {
             AddRequestHeaders();
 
-            HttpResponseMessage response;
-
             try
             {
-                response = httpHandler.GetAsync(GetUrl(searchTerm)).Result;
-            }
-            catch (Exception ex)
-            {
-                throw new NoInternetConnectionException();
-            }
+                var response = httpHandler.GetAsync(GetUrl(searchTerm)).Result;
 
-            if (response.IsSuccessStatusCode)
-            {
-                var json = response.Content.ReadAsStringAsync().Result;
-
-                return Parse(json,searchTerm);
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = response.Content.ReadAsStringAsync().Result;
+                    return Parse(json, searchTerm);
+                }
+                else
+                {
+                    throw new SearchEngineResponseException();
+                }
             }
-            else
+            catch (AggregateException ex)
             {
-                throw new TimeOutException();
+                ex.Handle((x) =>
+                {
+                    if (x is TimeoutException)
+                    {
+                        throw new TimeOutException();
+                    }
+                    else if (x is HttpRequestException)
+                    {
+                        throw new ConnectionException();
+                    }
+                    throw x;
+                });
+
+                throw ex;
             }
         }
 

@@ -26,6 +26,21 @@ namespace SearchFight.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(SearchEngineResponseException))]
+        public void CannotReturnSearchResultsFromGoogleWhenResponseFailed()
+        {
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockFailedResponse();
+            var google = new Google(fakeHttpHandler);
+
+            //Act
+            var searchResult = google.Search(".net");
+
+            //Assert
+
+        }
+
+        [TestMethod()]
         [ExpectedException(typeof(TimeOutException))]
         public void CannotSearchGoogleWhenTimeOut()
         {
@@ -38,6 +53,20 @@ namespace SearchFight.Tests
 
             //Assert
             
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ConnectionException))]
+        public void CannotSearchGoogleWhenNoConnection()
+        {
+            //Arrange
+            var fakeHttpHandler = new HttpHandlerMockConnectionProblem();
+            var google = new Google(fakeHttpHandler);
+
+            //Act
+            var searchResult = google.Search(".net");
+
+            //Assert
 
         }
 
