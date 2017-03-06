@@ -19,7 +19,7 @@ namespace SearchFight.Implementations.SearchEngines
             return uri + "?key=" + apiKey + "&cx=" + customSearchEngineID + "&q=" + searchTerm;
         }
 
-        protected override void AddApiKey(IHttpHandler httpHandler)
+        protected override void AddRequestHeaders()
         {
             
         }

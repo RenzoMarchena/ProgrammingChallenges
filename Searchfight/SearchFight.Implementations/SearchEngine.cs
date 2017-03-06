@@ -9,7 +9,7 @@ namespace SearchFight.Implementations
 {
     public abstract class SearchEngine : ISearchEngine
     {
-        private readonly IHttpHandler httpHandler;
+        protected readonly IHttpHandler httpHandler;
        
         public SearchEngine(IHttpHandler httpHandler)
         {
@@ -18,7 +18,7 @@ namespace SearchFight.Implementations
         }
         public ISearchResult Search(string searchTerm)
         {
-            AddApiKey(httpHandler);
+            AddRequestHeaders();
 
             HttpResponseMessage response;
 
@@ -58,7 +58,7 @@ namespace SearchFight.Implementations
         }
 
         protected abstract string GetUrl(string searchTerm);
-        protected abstract void AddApiKey(IHttpHandler httpHandler);
+        protected abstract void AddRequestHeaders();
         protected abstract long GetTotalResults(dynamic jObj);
     }
 }

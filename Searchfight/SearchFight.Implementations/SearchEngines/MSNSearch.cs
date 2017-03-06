@@ -17,7 +17,7 @@ namespace SearchFight.Implementations.SearchEngines
             return uri + "?q=" + searchTerm;
         }
 
-        protected override void AddApiKey(IHttpHandler httpHandler)
+        protected override void AddRequestHeaders()
         {
            httpHandler.AddRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
         }
