@@ -43,6 +43,7 @@ namespace SearchFight.View.Tests
             Assert.IsTrue(lines.Intersect(expectedLines).Count() == lines.Count());
         }
 
+        [TestMethod()]
         public void GettingWinnerBySearchEngineReturnsExpectedLinesForOneSearchTerm()
         {
             //Arrange
@@ -56,5 +57,25 @@ namespace SearchFight.View.Tests
 
             Assert.IsTrue(lines.Intersect(expectedLines).Count() == lines.Count());
         }
+
+        [TestMethod()]
+        public void GettingWinnerBySearchEngineReturnsExpectedLinesForMultipleSearchTerms()
+        {
+            //Arrange
+            var searchResults = new List<SearchResult> { new SearchResult {SearchEngineUsed="Google",NumberOfResults=1000,ProgrammingLanguage=".net"},
+                                                         new SearchResult {SearchEngineUsed="MSN Search",NumberOfResults=2001,ProgrammingLanguage=".net"},
+                                                         new SearchResult {SearchEngineUsed="Google",NumberOfResults=1001,ProgrammingLanguage="java"},
+                                                         new SearchResult {SearchEngineUsed="MSN Search",NumberOfResults=2000,ProgrammingLanguage="java"}};
+            //Act
+            var lines = ResultsPrinter.GetWinnerBySearchEngine(searchResults);
+
+            //Assert
+            var expectedLines = new List<string> { "Google winner: java", "MSN Search winner: .net" };
+
+            Assert.IsTrue(lines.Intersect(expectedLines).Count() == lines.Count());
+        }
+
+
+
     }
 }
