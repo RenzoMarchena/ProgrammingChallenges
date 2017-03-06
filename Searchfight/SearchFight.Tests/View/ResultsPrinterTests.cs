@@ -9,7 +9,7 @@ namespace SearchFight.View.Tests
     public class ResultsPrinterTests
     {
         [TestMethod()]
-        public void GroupingSearchResultsByProgrammingLanguageReturnsExpectedLineForOneSearchTerm()
+        public void GettingResultsByProgrammingLanguageReturnsExpectedLineForOneSearchTerm()
         {
             //Arrange
             var searchResults = new List<SearchResult> { new SearchResult {SearchEngineUsed="Google",NumberOfResults=1000,ProgrammingLanguage=".net"},
@@ -27,7 +27,7 @@ namespace SearchFight.View.Tests
         }
 
         [TestMethod()]
-        public void GroupingSearchResultsByProgrammingLanguageReturnsExpectedLinesForMultipleSearchTerms()
+        public void GettingResultsByProgrammingLanguageReturnsExpectedLinesForMultipleSearchTerms()
         {
             //Arrange
             var searchResults = new List<SearchResult> { new SearchResult {SearchEngineUsed="Google",NumberOfResults=1000,ProgrammingLanguage=".net"},
@@ -43,9 +43,18 @@ namespace SearchFight.View.Tests
             Assert.IsTrue(lines.Intersect(expectedLines).Count() == lines.Count());
         }
 
-        public void SearchResultsWithOneProgrammingLanguageReturnsExpected()
+        public void GettingWinnerBySearchEngineReturnsExpectedLinesForOneSearchTerm()
         {
-            Assert.Fail();
+            //Arrange
+            var searchResults = new List<SearchResult> { new SearchResult {SearchEngineUsed="Google",NumberOfResults=1000,ProgrammingLanguage=".net"},
+                                             new SearchResult {SearchEngineUsed="MSN Search",NumberOfResults=2000,ProgrammingLanguage=".net"}};
+            //Act
+            var lines = ResultsPrinter.GetWinnerBySearchEngine(searchResults);
+
+            //Assert
+            var expectedLines = new List<string> { "Google winner: .net", "MSN Search winner: .net" };
+
+            Assert.IsTrue(lines.Intersect(expectedLines).Count() == lines.Count());
         }
     }
 }
