@@ -89,6 +89,7 @@
     <Compile Include="SearchEngines\GoogleTests.cs" />
     <Compile Include="SearchEngines\MSNSearchTests.cs" />
     <Compile Include="SearchResultMock.cs" />
+    <Compile Include="View\ResultsPrinterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SearchFight.Exceptions\SearchFight.Exceptions.csproj">
