@@ -6,7 +6,7 @@ namespace SearchFight.Tests
     {
         public string SearchEngineUsed { get; set; }
 
-        public string Query { get; set; }
+        public string SearchTerm { get; set; }
 
         public long NumberOfResults { get; set; }
     }

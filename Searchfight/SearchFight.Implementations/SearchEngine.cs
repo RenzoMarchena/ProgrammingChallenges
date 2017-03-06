@@ -7,15 +7,16 @@ using SearchFight.Exceptions;
 
 namespace SearchFight.Implementations
 {
-    public abstract class SearchEngine:ISearchEngine
+    public abstract class SearchEngine : ISearchEngine
     {
         private readonly IHttpHandler httpHandler;
+       
         public SearchEngine(IHttpHandler httpHandler)
         {
             if (httpHandler == null) throw new ArgumentNullException("httpHandler");
             this.httpHandler = httpHandler;
         }
-        public ISearchResult Search(string stringToSearch)
+        public ISearchResult Search(string searchTerm)
         {
             AddApiKey(httpHandler);
 
@@ -23,44 +24,41 @@ namespace SearchFight.Implementations
 
             try
             {
-                response = httpHandler.GetAsync(AddParammeters(GetUri(), stringToSearch)).Result;
+                response = httpHandler.GetAsync(GetUrl(searchTerm)).Result;
             }
             catch (Exception ex)
             {
                 throw new NoInternetConnectionException();
             }
 
-            long totalResults = 0;
-
             if (response.IsSuccessStatusCode)
             {
-                var strJson = response.Content.ReadAsStringAsync().Result;
+                var json = response.Content.ReadAsStringAsync().Result;
 
-                //Deserialize the string to JSON object
-                dynamic jObj = (JObject)JsonConvert.DeserializeObject(strJson);
-                totalResults = GetTotalResults(jObj);
-
+                return Parse(json,searchTerm);
             }
             else
             {
-                throw new TimeOutException(); 
+                throw new TimeOutException();
             }
+        }
 
+        private ISearchResult Parse(string json,string searchTerm)
+        {
+            //Deserialize the string to JSON object
+            dynamic jObj = (JObject)JsonConvert.DeserializeObject(json);
+   
             var searchResult = new SearchResult();
 
             searchResult.SearchEngineUsed = ToString();
-            searchResult.Query = stringToSearch;
-            searchResult.NumberOfResults = totalResults;
+            searchResult.SearchTerm = searchTerm;
+            searchResult.NumberOfResults = GetTotalResults(jObj);
 
             return searchResult;
         }
 
-        protected abstract string AddParammeters(string absolutePath, string stringToSearch);
-
+        protected abstract string GetUrl(string searchTerm);
         protected abstract void AddApiKey(IHttpHandler httpHandler);
-
         protected abstract long GetTotalResults(dynamic jObj);
-
-        protected abstract string GetUri();
     }
 }

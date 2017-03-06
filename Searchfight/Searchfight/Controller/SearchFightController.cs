@@ -27,7 +27,7 @@ namespace SearchFight.Controller
                 viewModel.Add(new SearchResult()
                 {
                     SearchEngineUsed = searchResult.SearchEngineUsed,
-                    ProgrammingLanguage = searchResult.Query,
+                    ProgrammingLanguage = searchResult.SearchTerm,
                     NumberOfResults = searchResult.NumberOfResults
                 });
 

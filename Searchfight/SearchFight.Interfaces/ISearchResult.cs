@@ -5,7 +5,7 @@ namespace SearchFight.Interfaces
     {
         string SearchEngineUsed { get; set; } 
 
-        string Query { get; set; }
+        string SearchTerm { get; set; }
          
         long NumberOfResults { get; set; }
 

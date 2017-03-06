@@ -69,7 +69,7 @@ namespace SearchFight.Implementations.Tests
 
         private static void AssertAreValidSearchResults(IEnumerable<ISearchResult> searchResults, int numberOfSearchEngines, string programmingLanguage)
         {
-            var searchesByLanguage = searchResults.Where(searchResult => searchResult.Query == programmingLanguage);
+            var searchesByLanguage = searchResults.Where(searchResult => searchResult.SearchTerm == programmingLanguage);
 
             var numberOfSearchesByLanguage = searchesByLanguage.Count();
             Assert.AreEqual(numberOfSearchEngines, numberOfSearchesByLanguage);

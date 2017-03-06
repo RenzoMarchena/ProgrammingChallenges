@@ -1,5 +1,4 @@
-﻿using System.Net.Http;
-using SearchFight.Interfaces;
+﻿using SearchFight.Interfaces;
 
 namespace SearchFight.Implementations.SearchEngines
 {
@@ -12,13 +11,10 @@ namespace SearchFight.Implementations.SearchEngines
         {
 
         }
-        protected override string GetUri()
+
+        protected override string GetUrl(string searchTerm)
         {
-            return uri;
-        }
-        protected override string AddParammeters(string absolutePath, string stringToSearch)
-        {
-            return absolutePath + "?q=" + stringToSearch;
+            return uri + "?q=" + searchTerm;
         }
 
         protected override void AddApiKey(IHttpHandler httpHandler)

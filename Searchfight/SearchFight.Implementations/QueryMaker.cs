@@ -14,15 +14,15 @@ namespace SearchFight.Implementations
             this.supportedSearchEngines = supportedSearchEngines;
         }
 
-        public IEnumerable<ISearchResult> QuerySearchEngines(IEnumerable<string> queries)
+        public IEnumerable<ISearchResult> QuerySearchEngines(IEnumerable<string> searchTerms)
         {
             var searchResults = new List<ISearchResult>();
 
-            foreach (var query in queries)
+            foreach (var searchTerm in searchTerms)
             {
                 foreach (var searchEngine in supportedSearchEngines)
                 {
-                        var searchResult = searchEngine.Search(query);
+                        var searchResult = searchEngine.Search(searchTerm);
                         searchResults.Add(searchResult);
                 }
             }

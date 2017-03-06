@@ -7,10 +7,10 @@ namespace SearchFight.Tests
     {
         public IEnumerable<ISearchResult> QuerySearchEngines(IEnumerable<string> queries)
         {
-            return new List<ISearchResult> { new SearchResultMock {SearchEngineUsed="Google",NumberOfResults=1000,Query=".net"},
-                                             new SearchResultMock {SearchEngineUsed="MSNSearch",NumberOfResults=2000,Query=".net"},
-                                             new SearchResultMock {SearchEngineUsed="Google",NumberOfResults=1000,Query="java"},
-                                             new SearchResultMock {SearchEngineUsed="MSNSearch",NumberOfResults=2000,Query="java"} };
+            return new List<ISearchResult> { new SearchResultMock {SearchEngineUsed="Google",NumberOfResults=1000,SearchTerm=".net"},
+                                             new SearchResultMock {SearchEngineUsed="MSNSearch",NumberOfResults=2000,SearchTerm=".net"},
+                                             new SearchResultMock {SearchEngineUsed="Google",NumberOfResults=1000,SearchTerm="java"},
+                                             new SearchResultMock {SearchEngineUsed="MSNSearch",NumberOfResults=2000,SearchTerm="java"} };
         }
     }
 }

@@ -19,7 +19,7 @@ namespace SearchFight.Tests
             var searchResult = msnSearch.Search("java");
 
             //Assert
-            Assert.AreEqual("java", searchResult.Query);
+            Assert.AreEqual("java", searchResult.SearchTerm);
             Assert.AreEqual(13300000, searchResult.NumberOfResults);
             Assert.AreEqual("MSN Search", searchResult.SearchEngineUsed);
 

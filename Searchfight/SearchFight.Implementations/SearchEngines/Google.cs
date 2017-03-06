@@ -1,6 +1,5 @@
 ﻿using System;
 using SearchFight.Interfaces;
-using System.Net.Http;
 
 namespace SearchFight.Implementations.SearchEngines
 {
@@ -14,29 +13,24 @@ namespace SearchFight.Implementations.SearchEngines
         {
 
         }
-        protected override string GetUri()
+
+        protected override string GetUrl(string searchTerm)
         {
-            return uri;
-        }
-        protected override string AddParammeters(string absolutePath, string stringToSearch)
-        {
-            return absolutePath + "?key=" + apiKey + "&cx=" + customSearchEngineID + "&q=" + stringToSearch;
+            return uri + "?key=" + apiKey + "&cx=" + customSearchEngineID + "&q=" + searchTerm;
         }
 
         protected override void AddApiKey(IHttpHandler httpHandler)
         {
             
         }
-
         protected override long GetTotalResults(dynamic jObj)
         {
             return Convert.ToInt64(jObj["queries"]["request"][0]["totalResults"]);
         }
+      
         public override string ToString()
         {
             return "Google";
         }
-
-
     }
 }

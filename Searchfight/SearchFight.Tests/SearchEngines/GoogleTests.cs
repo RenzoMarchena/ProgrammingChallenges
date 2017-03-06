@@ -19,7 +19,7 @@ namespace SearchFight.Tests
             var searchResult = google.Search(".net");
 
             //Assert
-            Assert.AreEqual(".net", searchResult.Query);
+            Assert.AreEqual(".net", searchResult.SearchTerm);
             Assert.AreEqual(1560000000, searchResult.NumberOfResults);
             Assert.AreEqual("Google", searchResult.SearchEngineUsed);
 
