@@ -1,4 +1,4 @@
-# ProgrammingChallenges
+# Programming Challenges
 
 Searchfight:
 To determine the popularity of programming languages on the internet this application queries search engines and compares how many results they return, for example:
